@@ -1,0 +1,140 @@
+import 'package:flutter/material.dart';
+import 'package:ligapay/desktop/contact_page.dart';
+import 'package:ligapay/widgets/custom_footer.dart';
+import 'package:ligapay/widgets/responsive_header.dart';
+
+// ignore: use_key_in_widget_constructors
+class DesktopPersonalPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xffffffff),
+      body: DefaultTextStyle(
+        style: const TextStyle(fontFamily: 'Utendo'),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+
+              Stack(
+                alignment: Alignment.topLeft,
+                children: [
+                  Image(
+                    image: const NetworkImage(
+                        "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img1.png"),
+                    height: 800,
+                    width: MediaQuery.of(context).size.width,
+                    fit: BoxFit.cover,
+                    colorBlendMode: BlendMode.dstOver, // or BlendMode.srcOver
+                    color: Colors.black
+                        .withOpacity(0.2), // adjust the opacity value
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(50, 18, 50, 0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                         const ResponsiveHeader(),
+                        const SizedBox(
+                          height: 120,
+                          width: 16,
+                        ),
+                        const Text(
+                          "LigaPay \n personal account",
+                          textAlign: TextAlign.center,
+                          overflow: TextOverflow.clip,
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontStyle: FontStyle.normal,
+                            fontSize: 96,
+                            color: Color(0xffffffff),
+                          ),
+                        ),
+                        
+                       
+                        const SizedBox(
+                          height: 22,
+                          width: 16,
+                        ),
+                        const Text(
+      'With LigaPay, managing your personal finances  \n is easier, smarter, and more secure.',
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 24,
+        fontFamily: 'Utendo',
+        fontWeight: FontWeight.w400,
+      ),
+    ),
+    const SizedBox(height: 10), // Adds 24 pixels of vertical space
+    const Text(
+      'Don’t miss out—secure your spot now!',
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 24,
+        fontFamily: 'Utendo',
+        fontWeight: FontWeight.w400,
+      ),
+    ),
+                        const SizedBox(
+                          height: 60,
+                          width: 16,
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DesktopContactPage()),
+                            );
+                          },
+                          child: Container(
+                            margin: EdgeInsets.zero,
+                            padding: EdgeInsets.zero,
+                            width: 324,
+                            height: 60,
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(255, 0, 0, 0),
+                              shape: BoxShape.rectangle,
+                              borderRadius: BorderRadius.circular(30.0),
+                            ),
+                            child: const Align(
+                              alignment: Alignment.center,
+                              child: Text(
+                                "Join the waiting list",
+                                textAlign: TextAlign.center,
+                                overflow: TextOverflow.clip,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  fontStyle: FontStyle.normal,
+                                  fontSize: 20,
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              
+              
+
+              
+              const SizedBox(height: 50),
+             
+              CustomFooter(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
