@@ -20,16 +20,16 @@ class ResponsiveHeader extends StatelessWidget {
           // Logo Section
           Row(
             children: [
-              Icon(Icons.credit_card, color: Colors.black), // Adjust color for visibility
-              SizedBox(width: 8),
-              Text(
-                'LigaPay',
-                style: TextStyle(
-                  color: Colors.black, // Adjust text color for visibility
-                  fontSize: isDesktop ? 24 : 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              Container(
+  width: 224,
+  height: 55.50,
+  decoration: const BoxDecoration(
+    image: DecorationImage(
+      image: NetworkImage("https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/headerlogo.png"),
+      fit: BoxFit.fill,
+    ),
+  ),
+),
             ],
           ),
           if (isDesktop) _buildNavigationMenu(context), // Menu for Desktop

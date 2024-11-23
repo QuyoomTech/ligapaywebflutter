@@ -41,7 +41,7 @@ class LigaPay extends StatelessWidget {
         builder: (context, state) => _responsivePage(
           context,
           desktopPage: DesktopBusinessPage.DesktopBusinessPage(),
-          mobilePage: MobileBusinessPage.MobileBusinessPage(),
+          mobilePage: const MobileBusinessPage.MobileBusinessPage(),
         ),
       ),
       GoRoute(
