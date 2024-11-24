@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ligapay/desktop/contact_page.dart';
+import 'package:ligapay/widgets/custom_desktop_card1.dart';
+import 'package:ligapay/widgets/custom_desktop_card2.dart';
 import 'package:ligapay/widgets/custom_footer.dart';
+import 'package:ligapay/widgets/footer_desktop_card.dart';
 import 'package:ligapay/widgets/responsive_header.dart';
 
 // ignore: use_key_in_widget_constructors
@@ -44,7 +47,7 @@ class DesktopRemitancePage extends StatelessWidget {
                           width: 16,
                         ),
                         const Text(
-                          "Welcome to ",
+                          "Fast, Affordable, and Secure \n International Transfers ",
                           textAlign: TextAlign.center,
                           overflow: TextOverflow.clip,
                           style: TextStyle(
@@ -54,24 +57,14 @@ class DesktopRemitancePage extends StatelessWidget {
                             color: Color(0xffffffff),
                           ),
                         ),
-                        const Text(
-                          "LigaPay",
-                          textAlign: TextAlign.center,
-                          overflow: TextOverflow.clip,
-                          style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontStyle: FontStyle.normal,
-                            fontSize: 96,
-                            color: Color.fromARGB(255, 255, 255, 255),
-                          ),
-                        ),
+                      
                        
                         const SizedBox(
                           height: 22,
                           width: 16,
                         ),
                         const Text(
-      'Your All-in-One Financial Solution',
+      'LigaRemit makes sending money across borders easier than ever. With competitive \n exchange rates and lightning-fast transfers, you can send money to any bank, \n  anywhere in the world.',
       textAlign: TextAlign.center,
       style: TextStyle(
         color: Colors.white,
@@ -81,16 +74,7 @@ class DesktopRemitancePage extends StatelessWidget {
       ),
     ),
     const SizedBox(height: 10), // Adds 24 pixels of vertical space
-    const Text(
-      'Don’t miss out—secure your spot now!',
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        color: Colors.white,
-        fontSize: 24,
-        fontFamily: 'Utendo',
-        fontWeight: FontWeight.w400,
-      ),
-    ),
+    
                         const SizedBox(
                           height: 60,
                           width: 16,
@@ -137,9 +121,37 @@ class DesktopRemitancePage extends StatelessWidget {
               
               
 
-              
+              const CustomDesktopCard1(
+               
+  title: 'Share Payment Links Instantly',
+  description: 'Make it simple for your clients to pay—just send them a link, and they can complete the payment in moments.',
+   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb4.png?width=567&height=594',
+  descriptionMaxLines: 6, // Show up to 6 lines, adjust as needed
+),
+ const CustomDesktopCard2(
+               
+  title: 'Share Payment Links Instantly',
+  description: 'Make it simple for your clients to pay—just send them a link, and they can complete the payment in moments.',
+   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb5.png?width=200&height=200',
+  descriptionMaxLines: 6, // Show up to 6 lines, adjust as needed
+),
+ const CustomDesktopCard1(
+               
+  title: 'Manage Risk with Confidence',
+  description: 'Built-in risk management tools help safeguard your business, keeping your transactions secure and your peace of mind intact.',
+   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp6.png',
+  descriptionMaxLines: 6, // Show up to 6 lines, adjust as needed
+),
               const SizedBox(height: 50),
-             
+             FooterDesktopCard(
+  backgroundImage: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img1.png',
+  title: 'LigaPay Business Account',
+  subtitle: 'The smart choice for businesses that demand speed, security, and scalability.',
+  buttonText: 'Join the waiting list',
+  onButtonPressed: () {
+    print('Button Pressed');
+  },
+),
               CustomFooter(),
             ],
           ),

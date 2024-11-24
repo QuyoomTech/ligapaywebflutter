@@ -1,9 +1,13 @@
 import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:ligapay/desktop/contact_page.dart';
+import 'package:ligapay/widgets/footer_desktop_card.dart';
 import 'package:ligapay/widgets/responsive_header.dart';
 import 'package:ligapay/widgets/custom_footer.dart';
+
 import 'package:url_launcher/url_launcher.dart';
+ // Import the widget file
+ // Import the widget file
 class DesktopHomePage extends StatefulWidget {
   const DesktopHomePage({super.key});
 
@@ -145,7 +149,15 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
 
               
               const SizedBox(height: 50),
-             
+             FooterDesktopCard(
+  backgroundImage: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img1.png',
+  title: 'LigaPay Business Account',
+  subtitle: 'The smart choice for businesses that demand speed, security, and scalability.',
+  buttonText: 'Join the waiting list',
+  onButtonPressed: () {
+    print('Button Pressed');
+  },
+),
               CustomFooter(),
             ],
           ),

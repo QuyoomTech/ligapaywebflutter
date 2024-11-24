@@ -10,26 +10,27 @@ class ResponsiveHeader extends StatelessWidget {
     bool isDesktop = MediaQuery.of(context).size.width >= 800;
 
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      width: double.infinity,
       color: Colors.transparent, // Make the background transparent
       child: Row(
         mainAxisAlignment: isDesktop
             ? MainAxisAlignment.spaceBetween
-            : MainAxisAlignment.center,
+            : MainAxisAlignment.start,
         children: [
           // Logo Section
           Row(
             children: [
               Container(
-  width: 224,
-  height: 55.50,
-  decoration: const BoxDecoration(
-    image: DecorationImage(
-      image: NetworkImage("https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/headerlogo.png"),
-      fit: BoxFit.fill,
-    ),
-  ),
-),
+                width: 224,
+                height: 55.50,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                        "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/headerlogo.png "),
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              ),
             ],
           ),
           if (isDesktop) _buildNavigationMenu(context), // Menu for Desktop
@@ -62,7 +63,7 @@ class ResponsiveHeader extends StatelessWidget {
         },
         child: Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.black, // Adjust text color for visibility
             fontSize: 16,
           ),

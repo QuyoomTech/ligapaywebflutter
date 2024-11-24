@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:ligapay/widgets/custom_footer.dart';
+import 'package:ligapay/widgets/footer_desktop_card.dart';
 import 'package:ligapay/widgets/responsive_header.dart';
 
 class DesktopContactPage extends StatelessWidget {
@@ -139,7 +140,15 @@ class DesktopContactPage extends StatelessWidget {
 
               
               const SizedBox(height: 50),
-             
+             FooterDesktopCard(
+  backgroundImage: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img1.png',
+  title: 'LigaPay Business Account',
+  subtitle: 'The smart choice for businesses that demand speed, security, and scalability.',
+  buttonText: 'Join the waiting list',
+  onButtonPressed: () {
+    print('Button Pressed');
+  },
+),
               CustomFooter(),
             ],
           ),
