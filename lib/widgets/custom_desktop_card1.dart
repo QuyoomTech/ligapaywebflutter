@@ -13,9 +13,11 @@ class CustomDesktopCard1 extends StatelessWidget {
   final double imageHeight;
   final double spacing;
   final int descriptionMaxLines;
+  
+  final dynamic titleMaxLines;
 
  const CustomDesktopCard1({
-    Key? key,
+    super.key,
     required this.title,
     required this.description,
     required this.imageUrl,
@@ -27,8 +29,9 @@ class CustomDesktopCard1 extends StatelessWidget {
     this.imageWidth = 675, // Original width
     this.imageHeight = 675 , // Maintain aspect ratio dynamically
     this.spacing = 50,
-    this.descriptionMaxLines = 6, // Adjust this as needed
-  }) : super(key: key);
+    this.descriptionMaxLines = 6,
+    this.titleMaxLines = 6, // Adjust this as needed
+  });
 
 
   @override
@@ -55,6 +58,7 @@ class CustomDesktopCard1 extends StatelessWidget {
               children: [
                 SizedBox(
                   width: double.infinity,
+                   
                   child: Text(
                     title,
                     style: titleStyle ??
@@ -63,7 +67,7 @@ class CustomDesktopCard1 extends StatelessWidget {
                           fontSize: 50,
                           fontFamily: 'Utendo',
                           fontWeight: FontWeight.w500,
-                          height: 0.02,
+                          height: 1.2,
                         ),
                   ),
                 ),

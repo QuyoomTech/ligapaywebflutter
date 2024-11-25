@@ -16,8 +16,8 @@ class DesktopBusinessPage extends StatelessWidget {
         style: const TextStyle(fontFamily: 'Utendo'),
         child: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+    crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
               Stack(

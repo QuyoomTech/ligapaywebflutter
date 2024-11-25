@@ -25,8 +25,8 @@ class FooterDesktopCard extends StatelessWidget {
       decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
+         mainAxisAlignment: MainAxisAlignment.center,
+    crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
             width: 1400,

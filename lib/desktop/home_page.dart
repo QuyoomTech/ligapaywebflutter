@@ -1,13 +1,16 @@
 import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:ligapay/desktop/contact_page.dart';
+import 'package:ligapay/widgets/custom_desktop_card2.dart';
+import 'package:ligapay/widgets/custom_header_desktop.dart';
 import 'package:ligapay/widgets/footer_desktop_card.dart';
 import 'package:ligapay/widgets/responsive_header.dart';
 import 'package:ligapay/widgets/custom_footer.dart';
 
 import 'package:url_launcher/url_launcher.dart';
- // Import the widget file
- // Import the widget file
+
+// Import the widget file
+// Import the widget file
 class DesktopHomePage extends StatefulWidget {
   const DesktopHomePage({super.key});
 
@@ -33,11 +36,10 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
         style: const TextStyle(fontFamily: 'Utendo'),
         child: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
-
               Stack(
                 alignment: Alignment.topLeft,
                 children: [
@@ -58,7 +60,7 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                         const ResponsiveHeader(),
+                        const ResponsiveHeader(),
                         const SizedBox(
                           height: 120,
                           width: 16,
@@ -74,33 +76,33 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
                             color: Color(0xffffffff),
                           ),
                         ),
-                        
-                       
+
                         const SizedBox(
                           height: 22,
                           width: 16,
                         ),
                         const Text(
-      'Your All-in-One Financial Solution',
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        color: Colors.white,
-        fontSize: 24,
-        fontFamily: 'Utendo',
-        fontWeight: FontWeight.w400,
-      ),
-    ),
-    const SizedBox(height: 10), // Adds 24 pixels of vertical space
-    const Text(
-      'Don’t miss out—secure your spot now!',
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        color: Colors.white,
-        fontSize: 24,
-        fontFamily: 'Utendo',
-        fontWeight: FontWeight.w400,
-      ),
-    ),
+                          'Your All-in-One Financial Solution',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                            fontFamily: 'Utendo',
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                        const SizedBox(
+                            height: 10), // Adds 24 pixels of vertical space
+                        const Text(
+                          'Don’t miss out—secure your spot now!',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                            fontFamily: 'Utendo',
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
                         const SizedBox(
                           height: 60,
                           width: 16,
@@ -144,20 +146,30 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
                   ),
                 ],
               ),
-              
-              
-
-              
-              const SizedBox(height: 50),
-             FooterDesktopCard(
-  backgroundImage: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img1.png',
-  title: 'LigaPay Business Account',
-  subtitle: 'The smart choice for businesses that demand speed, security, and scalability.',
-  buttonText: 'Join the waiting list',
-  onButtonPressed: () {
-    print('Button Pressed');
-  },
-),
+              const CustomDesktopCard2(
+                title: 'Seamless Payments, Anytime, Anywhere.',
+                description:
+                    'LigaPay makes payments effortless and secure, whether you are transferring money, paying for services, handling business payments, or managing finances. Available 24/7 worldwide, LigaPay offers seamless, hassle-free transactions anytime, anywhere, with just the touch of a button.',
+                imageUrl:
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img2.png',
+                descriptionMaxLines: 6,
+                titleMaxLines: 6, // Show up to 6 lines, adjust as needed
+              ),
+             
+              CustomHeaderDesktop(
+            title: 'Why LigaPay?',
+          ),
+              FooterDesktopCard(
+                backgroundImage:
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img1.png',
+                title: 'LigaPay Business Account',
+                subtitle:
+                    'The smart choice for businesses that demand speed, security, and scalability.',
+                buttonText: 'Join the waiting list',
+                onButtonPressed: () {
+                  print('Button Pressed');
+                },
+              ),
               CustomFooter(),
             ],
           ),
