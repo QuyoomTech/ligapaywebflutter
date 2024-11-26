@@ -22,9 +22,9 @@ class DesktopRemitancePage extends StatelessWidget {
             children: [
 
              HeroDesktop(
-          backgroundImageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img1.png",
-          title: "Welcome to LigaPay",
-          subtitle: "Your All-in-One Financial Solution\nDon’t miss out—secure your spot now!",
+          backgroundImageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lr1.png",
+          title: "Fast, Affordable, and Secure \n International Transfers",
+          subtitle: "LigaRemit makes sending money across borders easier than ever. \n With competitive exchange rates and lightning-fast transfers, you can send money to any bank,\n anywhere in the world.",
           buttonText: "Join the waiting list",
           onButtonPressed: () {
             // Handle button press here

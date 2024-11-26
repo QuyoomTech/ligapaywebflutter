@@ -17,13 +17,13 @@ class DesktopBusinessPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-    crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
               HeroDesktop(
-          backgroundImageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img1.png",
-          title: "Welcome to LigaPay",
-          subtitle: "Your All-in-One Financial Solution\nDon’t miss out—secure your spot now!",
+          backgroundImageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb1.png",
+          title: "Empower Your Business \n with LigaPay",
+          subtitle: "Streamline your business transactions and take control of your finances with a smart,\n flexible payment platform that’s built to grow with you.",
           buttonText: "Join the waiting list",
           onButtonPressed: () {
             // Handle button press here

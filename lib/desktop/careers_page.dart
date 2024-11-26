@@ -20,9 +20,9 @@ class DesktopCareersPage extends StatelessWidget {
             children: [
 
              HeroDesktop(
-          backgroundImageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img1.png",
-          title: "Welcome to LigaPay",
-          subtitle: "Your All-in-One Financial Solution\nDon’t miss out—secure your spot now!",
+          backgroundImageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lc1.png",
+          title: "Join us  as we improve \n financial wellness for millions",
+          subtitle: "We are an innovative fintech company .\n  Here, you can break free of bureaucracy, discover your spark, \n and bring creative ideas to life",
           buttonText: "Join the waiting list",
           onButtonPressed: () {
             // Handle button press here

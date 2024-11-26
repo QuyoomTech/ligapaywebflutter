@@ -10,9 +10,9 @@ class CustomHeaderDesktop extends StatelessWidget {
   const CustomHeaderDesktop({
     Key? key,
     required this.title,
-    this.width = 1497,
-    this.height = 285,
-    this.padding = const EdgeInsets.symmetric(horizontal: 200, vertical: 50),
+    this.width = 1500,
+    this.height = 0,
+    this.padding = const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
     this.textStyle,
   }) : super(key: key);
 
@@ -24,7 +24,7 @@ class CustomHeaderDesktop extends StatelessWidget {
       padding: padding,
       child: Row(
         mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(

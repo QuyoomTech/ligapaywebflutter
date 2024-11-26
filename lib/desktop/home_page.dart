@@ -38,14 +38,14 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
         style: const TextStyle(fontFamily: 'Utendo'),
         child: SingleChildScrollView(
           child: Column(
-           // mainAxisAlignment: MainAxisAlignment.center,
-           // crossAxisAlignment: CrossAxisAlignment.center,
+           mainAxisAlignment: MainAxisAlignment.start,
+           crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
              
    HeroDesktop(
           backgroundImageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img1.png",
-          title: "Welcome to LigaPay",
+          title: "Welcome to \n LigaPay",
           subtitle: "Your All-in-One Financial Solution\nDon’t miss out—secure your spot now!",
           buttonText: "Join the waiting list",
           onButtonPressed: () {
@@ -53,115 +53,7 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
             print("Button Pressed");
           },
         ),
-            
-
-              // Stack(
-              //   alignment: Alignment.topLeft,
-              //   children: [
-              //     Image(
-              //       image: const NetworkImage(
-              //           "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img1.png"),
-              //       height: 800,
-              //       width: MediaQuery.of(context).size.width,
-              //       fit: BoxFit.cover,
-              //       colorBlendMode: BlendMode.dstOver, // or BlendMode.srcOver
-              //       color: Colors.black
-              //           .withOpacity(0.2), // adjust the opacity value
-              //     ),
-              //     Padding(
-              //       padding: const EdgeInsets.fromLTRB(50, 18, 50, 0),
-              //       child: Column(
-              //         mainAxisAlignment: MainAxisAlignment.start,
-              //         crossAxisAlignment: CrossAxisAlignment.center,
-              //         mainAxisSize: MainAxisSize.max,
-              //         children: [
-              //           const ResponsiveHeader(),
-              //           const SizedBox(
-              //             height: 120,
-              //             width: 16,
-              //           ),
-              //           const Text(
-              //             "Welcome to \n LigaPay ",
-              //             textAlign: TextAlign.center,
-              //             overflow: TextOverflow.clip,
-              //             style: TextStyle(
-              //               fontWeight: FontWeight.w600,
-              //               fontStyle: FontStyle.normal,
-              //               fontSize: 96,
-              //               color: Color(0xffffffff),
-              //             ),
-              //           ),
-
-              //           const SizedBox(
-              //             height: 22,
-              //             width: 16,
-              //           ),
-              //           const Text(
-              //             'Your All-in-One Financial Solution',
-              //             textAlign: TextAlign.center,
-              //             style: TextStyle(
-              //               color: Colors.white,
-              //               fontSize: 24,
-              //               fontFamily: 'Utendo',
-              //               fontWeight: FontWeight.w400,
-              //             ),
-              //           ),
-              //           const SizedBox(
-              //               height: 10), // Adds 24 pixels of vertical space
-              //           const Text(
-              //             'Don’t miss out—secure your spot now!',
-              //             textAlign: TextAlign.center,
-              //             style: TextStyle(
-              //               color: Colors.white,
-              //               fontSize: 24,
-              //               fontFamily: 'Utendo',
-              //               fontWeight: FontWeight.w400,
-              //             ),
-              //           ),
-              //           const SizedBox(
-              //             height: 60,
-              //             width: 16,
-              //           ),
-              //           GestureDetector(
-              //             onTap: () {
-              //               Navigator.push(
-              //                 context,
-              //                 MaterialPageRoute(
-              //                     builder: (context) => DesktopContactPage()),
-              //               );
-              //             },
-              //             child: Container(
-              //               margin: EdgeInsets.zero,
-              //               padding: EdgeInsets.zero,
-              //               width: 324,
-              //               height: 60,
-              //               decoration: BoxDecoration(
-              //                 color: const Color.fromARGB(255, 0, 0, 0),
-              //                 shape: BoxShape.rectangle,
-              //                 borderRadius: BorderRadius.circular(30.0),
-              //               ),
-              //               child: const Align(
-              //                 alignment: Alignment.center,
-              //                 child: Text(
-              //                   "Join the waiting list",
-              //                   textAlign: TextAlign.center,
-              //                   overflow: TextOverflow.clip,
-              //                   style: TextStyle(
-              //                     fontWeight: FontWeight.w400,
-              //                     fontStyle: FontStyle.normal,
-              //                     fontSize: 20,
-              //                     color: Color.fromARGB(255, 255, 255, 255),
-              //                   ),
-              //                 ),
-              //               ),
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //     ),
-              //   ],
-              // ),
-              
+          
 
               const CustomDesktopCard2(
                 title: 'Seamless Payments, Anytime, Anywhere.',
@@ -179,7 +71,7 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
           Container(
   width: 1500,
   height: 775,
-  padding: const EdgeInsets.all(50),
+  //padding: const EdgeInsets.all(50),
   clipBehavior: Clip.antiAlias,
   decoration: const BoxDecoration(color: Colors.transparent),
   child: const Row(

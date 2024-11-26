@@ -23,9 +23,9 @@ class DesktopPersonalPage extends StatelessWidget {
             children: [
 
              HeroDesktop(
-          backgroundImageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img1.png",
-          title: "Welcome to LigaPay",
-          subtitle: "Your All-in-One Financial Solution\nDon’t miss out—secure your spot now!",
+          backgroundImageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp1.png",
+          title: " LigaPay \n Personal Account",
+          subtitle: "With LigaPay, managing your personal \n finances is easier, smarter, and more secure.",
           buttonText: "Join the waiting list",
           onButtonPressed: () {
             // Handle button press here
