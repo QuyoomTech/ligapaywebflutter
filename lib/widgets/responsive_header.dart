@@ -64,7 +64,7 @@ class ResponsiveHeader extends StatelessWidget {
         child: Text(
           title,
           style: const TextStyle(
-            color: Colors.black, // Adjust text color for visibility
+            color: Colors.white, // Adjust text color for visibility
             fontSize: 16,
           ),
         ),
