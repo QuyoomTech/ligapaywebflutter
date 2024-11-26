@@ -60,7 +60,7 @@ class FooterDesktopCard extends StatelessWidget {
                     height: 650,
                     padding: const EdgeInsets.all(50),
                     decoration: ShapeDecoration(
-                      color: Colors.black.withOpacity(0.3),
+                      //color: Colors.black.withOpacity(0.3),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50),
                       ),

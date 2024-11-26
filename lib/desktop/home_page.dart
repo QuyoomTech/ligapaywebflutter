@@ -72,7 +72,7 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
           Container(
   width: 1500,
   height: 775,
-  //padding: const EdgeInsets.all(50),
+   padding: const EdgeInsets.symmetric(horizontal: 50),
   clipBehavior: Clip.antiAlias,
   decoration: const BoxDecoration(color: Colors.transparent),
   child: const Row(
@@ -112,7 +112,7 @@ CustomDesktopCard3(
 Container(
   width: 1500,
   height: 775,
-  padding: const EdgeInsets.all(50),
+   padding: const EdgeInsets.symmetric(horizontal: 50),
   clipBehavior: Clip.antiAlias,
   decoration: const BoxDecoration(color: Colors.transparent),
   child: const Row(
@@ -152,7 +152,7 @@ CustomDesktopCard3(
  Container(
   width: 1500,
   height: 775,
-  padding: const EdgeInsets.all(50),
+   padding: const EdgeInsets.symmetric(horizontal: 50),
   clipBehavior: Clip.antiAlias,
   decoration: const BoxDecoration(color: Colors.transparent),
   child: const Row(

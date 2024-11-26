@@ -38,7 +38,7 @@ class CustomDesktopCard2 extends StatelessWidget {
     return Container(
       width: width,
       height: height,
-      padding: EdgeInsets.all(padding),
+       padding: const EdgeInsets.symmetric(horizontal: 50),
       clipBehavior: Clip.antiAlias,
       decoration: const BoxDecoration(),
       child: Row(

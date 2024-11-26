@@ -38,8 +38,8 @@ class HeroDesktop extends StatelessWidget {
             width: double.infinity,
             height: 842,
             padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-            decoration: BoxDecoration(
-              color: Colors.black.withOpacity(0.3),
+            decoration: const BoxDecoration(
+             // color: Colors.black.withOpacity(0.3),
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
