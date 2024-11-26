@@ -2,6 +2,7 @@ import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:ligapay/desktop/contact_page.dart';
 import 'package:ligapay/widgets/custom_desktop_card2.dart';
+import 'package:ligapay/widgets/custom_desktop_card3.dart';
 import 'package:ligapay/widgets/custom_header_desktop.dart';
 import 'package:ligapay/widgets/footer_desktop_card.dart';
 import 'package:ligapay/widgets/hero_desktop.dart';
@@ -85,7 +86,7 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
             description:
                 "Manage your USD wallet for personal or business use, accessible from anywhere in the world.",
           ),
-           const SizedBox(
+           SizedBox(
                          
                           width: 50,
                         ),
@@ -98,6 +99,55 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
           
     ],
   ),
+),
+CustomDesktopCard3(
+  title: 'Seamless Payment Collection',
+  description: 'Accept payments with a unique link or QR code, tailored for each transaction.',
+  buttonText: 'Apply now',
+  imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img5.png',
+  onButtonPressed: () {
+    print('Collect now');
+  },
+),
+Container(
+  width: 1500,
+  height: 775,
+  padding: const EdgeInsets.all(50),
+  clipBehavior: Clip.antiAlias,
+  decoration: const BoxDecoration(color: Colors.transparent),
+  child: const Row(
+    mainAxisSize: MainAxisSize.min,
+    mainAxisAlignment: MainAxisAlignment.center,
+    crossAxisAlignment: CrossAxisAlignment.center,
+    children: [
+    SquareImageDesktop(
+            imageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img6.png",
+            title: "Multi-Currency Transfers",
+            description:
+                "Transfer money to any bank account globally in any currency, with instant conversion.",
+          ),
+           const SizedBox(
+                         
+                          width: 50,
+                        ),
+          SquareImageDesktop(
+            imageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img7.png",
+            title: "Advanced Security",
+            description:
+                "Your transactions are protected with top-notch encryption, ensuring peace of mind every step of the way.",
+          ),
+          
+    ],
+  ),
+),
+CustomDesktopCard3(
+  title: 'Low-Cost Transactions',
+  description: 'Enjoy a minimal transaction fee of just 0.5%, with your transactions for the first 3 months free.',
+  buttonText: 'Apply now',
+  imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img8.png',
+  onButtonPressed: () {
+    print('Apply button clicked!');
+  },
 ),
  Container(
   width: 1500,
@@ -130,6 +180,9 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
     ],
   ),
 ),
+ const CustomHeaderDesktop(
+            title: 'Your money stays safe',
+          ),
               FooterDesktopCard(
                 backgroundImage:
                     'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img1.png',

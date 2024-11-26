@@ -1,6 +1,6 @@
 // ignore_for_file: use_key_in_widget_constructors
-
 import 'package:flutter/material.dart';
+import 'package:ligapay/widgets/custom_desktop_card3.dart';
 import 'package:ligapay/widgets/custom_footer.dart';
 import 'package:ligapay/widgets/footer_desktop_card.dart';
 import 'package:ligapay/widgets/hero_desktop.dart';
@@ -15,7 +15,7 @@ class DesktopContactPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
            mainAxisAlignment: MainAxisAlignment.center,
-    crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
 
@@ -31,7 +31,6 @@ class DesktopContactPage extends StatelessWidget {
         ),
               
               
-
               
               const SizedBox(height: 50),
              FooterDesktopCard(
