@@ -67,7 +67,7 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
                 titleMaxLines: 6, // Show up to 6 lines, adjust as needed
               ),
              
-              TextHeaderDesktop(
+              const TextHeaderDesktop(
   text: 'Why LigaPay?',
 ),
 

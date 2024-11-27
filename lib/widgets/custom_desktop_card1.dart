@@ -13,10 +13,9 @@ class CustomDesktopCard1 extends StatelessWidget {
   final double imageHeight;
   final double spacing;
   final int descriptionMaxLines;
-  
-  final dynamic titleMaxLines;
+  final int titleMaxLines;
 
- const CustomDesktopCard1({
+  const CustomDesktopCard1({
     super.key,
     required this.title,
     required this.description,
@@ -26,20 +25,19 @@ class CustomDesktopCard1 extends StatelessWidget {
     this.width = 1500,
     this.height = 728,
     this.padding = 50,
-    this.imageWidth = 675, // Original width
-    this.imageHeight = 675 , // Maintain aspect ratio dynamically
+    this.imageWidth = 675,
+    this.imageHeight = 675,
     this.spacing = 50,
     this.descriptionMaxLines = 6,
-    this.titleMaxLines = 6, // Adjust this as needed
+    this.titleMaxLines = 2,
   });
-
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: width,
       height: height,
-       padding: const EdgeInsets.symmetric(horizontal: 50),
+      padding: const EdgeInsets.symmetric(horizontal: 50),
       clipBehavior: Clip.antiAlias,
       decoration: const BoxDecoration(),
       child: Row(
@@ -58,7 +56,6 @@ class CustomDesktopCard1 extends StatelessWidget {
               children: [
                 SizedBox(
                   width: double.infinity,
-                   
                   child: Text(
                     title,
                     style: titleStyle ??
@@ -69,6 +66,8 @@ class CustomDesktopCard1 extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                           height: 1.2,
                         ),
+                    maxLines: titleMaxLines,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
                 const SizedBox(height: 23),
@@ -85,8 +84,7 @@ class CustomDesktopCard1 extends StatelessWidget {
                           height: 1.5,
                         ),
                     maxLines: descriptionMaxLines,
-                    overflow: TextOverflow.ellipsis, // Adds "..." for overflow
-                    softWrap: true, // Ensures the text wraps within bounds
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
               ],

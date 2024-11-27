@@ -5,6 +5,7 @@ import 'package:ligapay/widgets/custom_footer.dart';
 import 'package:ligapay/widgets/footer_desktop_card.dart';
 import 'package:ligapay/widgets/hero_desktop.dart';
 import 'package:ligapay/widgets/custom_desktop_card1.dart';
+import 'package:ligapay/widgets/text_header_desktop.dart';
 
 // ignore: use_key_in_widget_constructors
 class DesktopBusinessPage extends StatelessWidget {
@@ -30,12 +31,18 @@ class DesktopBusinessPage extends StatelessWidget {
             print("Button Pressed");
           },
         ),
+
+          const TextHeaderDesktop(
+  text: 'Why Business Account',
+),
               const CustomDesktopCard1(
                
   title: 'Fast Withdrawals',
   description: 'Access your funds quickly and efficiently, ensuring you have the cash flow needed to run your business smoothly.',
    imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb2.png',
-  descriptionMaxLines: 6, // Show up to 6 lines, adjust as needed
+  descriptionMaxLines: 6, 
+   imageHeight: 675, // Custom height for the image
+  imageWidth: 675,// Show up to 6 lines, adjust as needed
 ),
 
            Container(
@@ -104,24 +111,30 @@ class DesktopBusinessPage extends StatelessWidget {
   title: 'Share Payment Links Instantly',
   description: 'Make it simple for your clients to pay—just send them a link, and they can complete the payment in moments.',
    imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb4.png?width=567&height=594',
-  descriptionMaxLines: 6, // Show up to 6 lines, adjust as needed
+  descriptionMaxLines: 6,
+   imageHeight: 700, // Custom height for the image
+  imageWidth: 675, // Show up to 6 lines, adjust as needed
 ),
  const CustomDesktopCard2(
                
-  title: 'Share Payment Links Instantly',
-  description: 'Make it simple for your clients to pay—just send them a link, and they can complete the payment in moments.',
+  title: 'Unlimited Transactions',
+  description: 'Scale your business without restrictions. LigaPay offers unlimited transactions so you can focus on growth',
    imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb5.png?width=200&height=200',
-  descriptionMaxLines: 6, // Show up to 6 lines, adjust as needed
+  descriptionMaxLines: 6, 
+  imageHeight: 554, // Custom height for the image
+  imageWidth: 675, // Show up to 6 lines, adjust as needed
 ),
  const CustomDesktopCard1(
                
   title: 'Manage Risk with Confidence',
   description: 'Built-in risk management tools help safeguard your business, keeping your transactions secure and your peace of mind intact.',
-   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp6.png',
-  descriptionMaxLines: 6, // Show up to 6 lines, adjust as needed
+   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb6.png',
+  descriptionMaxLines: 6, 
+   imageHeight: 467, // Custom height for the image
+  imageWidth: 675,// Show up to 6 lines, adjust as needed
 ),
 FooterDesktopCard(
-  backgroundImage: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img1.png',
+  backgroundImage: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb7.png',
   title: 'LigaPay Business Account',
   subtitle: 'The smart choice for businesses that demand speed, security, and scalability.',
   buttonText: 'Join the waiting list',
