@@ -152,7 +152,7 @@ CustomDesktopCard3(
   buttonText: 'Apply now',
   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img8.png',
   onButtonPressed: () {
-    print('Apply button clicked!');
+    print('Claim offer now');
   },
 ),
  Container(

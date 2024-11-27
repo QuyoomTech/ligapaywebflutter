@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -12,10 +13,9 @@ class ResponsiveHeader extends StatelessWidget {
     return Container(
       width: double.infinity,
       color: Colors.transparent, // Make the background transparent
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Row(
-        mainAxisAlignment: isDesktop
-            ? MainAxisAlignment.spaceBetween
-            : MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           // Logo Section
           Row(
@@ -26,21 +26,25 @@ class ResponsiveHeader extends StatelessWidget {
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: NetworkImage(
-                        "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/headerlogo.png "),
+                        "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/headerlogo.png"),
                     fit: BoxFit.fill,
                   ),
                 ),
               ),
             ],
           ),
-          if (isDesktop) _buildNavigationMenu(context), // Menu for Desktop
+          // Navigation Menu
+          if (isDesktop)
+            _buildDesktopNavigationMenu(context)
+          else
+            _buildMobileNavigationMenu(context), // Mobile Navigation
         ],
       ),
     );
   }
 
   // Desktop Navigation Menu
-  Widget _buildNavigationMenu(BuildContext context) {
+  Widget _buildDesktopNavigationMenu(BuildContext context) {
     return Row(
       children: [
         _buildNavItem(context, 'Home', '/'),
@@ -53,7 +57,36 @@ class ResponsiveHeader extends StatelessWidget {
     );
   }
 
-  // Navigation Menu Item
+  // Mobile Navigation Menu
+  Widget _buildMobileNavigationMenu(BuildContext context) {
+    return IconButton(
+      icon: const Icon(Icons.menu, color: Colors.white),
+      onPressed: () {
+        // Show bottom sheet or modal for navigation
+        showModalBottomSheet(
+          context: context,
+          builder: (BuildContext context) {
+            return Container(
+              color: Colors.black,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  _buildMobileNavItem(context, 'Home', '/'),
+                  _buildMobileNavItem(context, 'Personal', '/personal'),
+                  _buildMobileNavItem(context, 'Business', '/business'),
+                  _buildMobileNavItem(context, 'Remittance', '/remittance'),
+                  _buildMobileNavItem(context, 'Careers', '/careers'),
+                  _buildMobileNavItem(context, 'Contact Us', '/contact'),
+                ],
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
+
+  // Navigation Menu Item for Desktop
   Widget _buildNavItem(BuildContext context, String title, String route) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -69,6 +102,20 @@ class ResponsiveHeader extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  // Navigation Menu Item for Mobile
+  Widget _buildMobileNavItem(BuildContext context, String title, String route) {
+    return ListTile(
+      title: Text(
+        title,
+        style: const TextStyle(color: Colors.white),
+      ),
+      onTap: () {
+        Navigator.of(context).pop(); // Close the modal
+        context.go(route); // GoRouter navigation
+      },
     );
   }
 }
