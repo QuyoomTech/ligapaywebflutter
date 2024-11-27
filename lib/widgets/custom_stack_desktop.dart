@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
-class SquareImageDesktop extends StatelessWidget {
+class CustomStackHeightSquareImageDesktop extends StatelessWidget {
+  final double customStackHeight;
   final String imageUrl;
   final String title;
   final String description;
 
-  const SquareImageDesktop({
+  const CustomStackHeightSquareImageDesktop({
     Key? key,
+    required this.customStackHeight,
     required this.imageUrl,
     required this.title,
     required this.description,
@@ -14,12 +16,12 @@ class SquareImageDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 675,
-      height: 675,
+    return SizedBox(
+      width: 675, // Maintain the width defined in the original widget
+      height: customStackHeight,
       child: Stack(
         children: [
-          // Background image with rounded corners
+          // Recreate the container structure with custom height
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
@@ -29,14 +31,8 @@ class SquareImageDesktop extends StatelessWidget {
               borderRadius: BorderRadius.circular(30),
             ),
           ),
-          // Gradient overlay with text content
           Container(
             decoration: const BoxDecoration(
-              // gradient: LinearGradient(
-              //   begin: Alignment.topCenter,
-              //   end: Alignment.bottomCenter,
-              //  // colors: [Color(0xFF504062), Color(0x00504062)],
-              // ),
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(30),
                 topRight: Radius.circular(30),

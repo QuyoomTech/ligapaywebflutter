@@ -24,7 +24,7 @@ class CustomDesktopCard2 extends StatelessWidget {
     this.titleStyle,
     this.descriptionStyle,
     this.width = 1500,
-    this.height = 728,
+    this.height = 675,
     this.padding = 50,
     this.imageWidth =675,
     this.imageHeight = 675,

@@ -14,7 +14,7 @@ class TextHeaderDesktop extends StatelessWidget {
     this.width = 1500,
     this.height = 280,
    // this.padding = const EdgeInsets.all(150),
-    this. padding =const EdgeInsets.symmetric(horizontal: 150, vertical: 50),
+    this. padding =const EdgeInsets.symmetric(horizontal: 100, vertical: 50),
   }) : super(key: key);
 
   @override
@@ -30,8 +30,9 @@ class TextHeaderDesktop extends StatelessWidget {
         style: textStyle ??
             const TextStyle(
               color: Color(0xFF010101),
-              fontSize: 96,
+              fontSize: 90,
               fontWeight: FontWeight.w600,
+               height: 1.0,
             ),
       ),
     );
