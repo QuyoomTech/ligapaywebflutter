@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ligapay/desktop/contact_page.dart';
 import 'package:ligapay/widgets/custom_desktop_card2.dart';
 import 'package:ligapay/widgets/custom_desktop_card3.dart';
-import 'package:ligapay/widgets/custom_header_desktop.dart';
+import 'package:ligapay/widgets/text_header_desktop.dart';
 import 'package:ligapay/widgets/footer_desktop_card.dart';
 import 'package:ligapay/widgets/hero_desktop.dart';
 
@@ -66,12 +66,13 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
                 titleMaxLines: 6, // Show up to 6 lines, adjust as needed
               ),
              
-              const CustomHeaderDesktop(
-            title: 'Why LigaPay?',
-          ),
+              TextHeaderDesktop(
+  text: 'Why LigaPay?',
+),
+
           Container(
   width: 1500,
-  height: 775,
+  height: 675,
    padding: const EdgeInsets.symmetric(horizontal: 50),
   clipBehavior: Clip.antiAlias,
   decoration: const BoxDecoration(color: Colors.transparent),
@@ -111,7 +112,7 @@ CustomDesktopCard3(
 ),
 Container(
   width: 1500,
-  height: 775,
+  height: 675,
    padding: const EdgeInsets.symmetric(horizontal: 50),
   clipBehavior: Clip.antiAlias,
   decoration: const BoxDecoration(color: Colors.transparent),
@@ -151,7 +152,7 @@ CustomDesktopCard3(
 ),
  Container(
   width: 1500,
-  height: 775,
+  height: 675,
    padding: const EdgeInsets.symmetric(horizontal: 50),
   clipBehavior: Clip.antiAlias,
   decoration: const BoxDecoration(color: Colors.transparent),
@@ -180,9 +181,10 @@ CustomDesktopCard3(
     ],
   ),
 ),
- const CustomHeaderDesktop(
-            title: 'Your money stays safe',
-          ),
+ const TextHeaderDesktop(
+  text: 'Your money stays safe',
+),
+
               FooterDesktopCard(
                 backgroundImage:
                     'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img1.png',

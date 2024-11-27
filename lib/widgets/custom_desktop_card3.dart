@@ -25,7 +25,7 @@ class CustomDesktopCard3 extends StatelessWidget {
       children: [
         Container(
           width: 1500,
-          height: 650,
+          height: 617,
 
           padding: const EdgeInsets.symmetric(horizontal: 50),
           // decoration: const BoxDecoration(color: Color(0xFF7DC5E9)),
