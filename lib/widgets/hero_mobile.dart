@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ligapay/widgets/responsive_header.dart';
+import 'package:ligapay/widgets/mobile_nav_header.dart';
+
 
 class HeroMobile extends StatelessWidget {
   final String backgroundImageUrl;
@@ -24,7 +25,7 @@ class HeroMobile extends StatelessWidget {
         // Background image
         Container(
           width: double.infinity,
-          height: 400, // Reduced height for mobile
+          height: 706, // Reduced height for mobile
           decoration: BoxDecoration(
             image: DecorationImage(
               image: NetworkImage(backgroundImageUrl),
@@ -35,14 +36,14 @@ class HeroMobile extends StatelessWidget {
         // Black overlay and centered content
         Positioned.fill(
           child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10), // Reduced padding for mobile
-            color: Colors.black.withOpacity(0.4), // Semi-transparent overlay
+            padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10), // Reduced padding for mobile
+           // color: Colors.black.withOpacity(0.4), // Semi-transparent overlay
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 // Title
-                const ResponsiveHeader(),
+                const MobileNavHeader(), 
                 Text(
                   title,
                   textAlign: TextAlign.center,

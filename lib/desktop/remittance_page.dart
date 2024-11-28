@@ -5,6 +5,7 @@ import 'package:ligapay/widgets/custom_desktop_card2.dart';
 import 'package:ligapay/widgets/custom_footer.dart';
 import 'package:ligapay/widgets/footer_desktop_card.dart';
 import 'package:ligapay/widgets/hero_desktop.dart';
+import 'package:ligapay/widgets/text_header_desktop.dart';
 
 // ignore: use_key_in_widget_constructors
 class DesktopRemitancePage extends StatelessWidget {
@@ -33,7 +34,9 @@ class DesktopRemitancePage extends StatelessWidget {
         ),
               
               
-
+ const TextHeaderDesktop(
+  text: 'Why Choose LigaRemit?',
+),
               const CustomDesktopCard1(
                
   title: 'Best Exchange Rates',
