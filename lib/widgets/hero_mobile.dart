@@ -44,12 +44,13 @@ class HeroMobile extends StatelessWidget {
               children: [
                 // Title
                 const MobileNavHeader(), 
+                const SizedBox(height:200),
                 Text(
                   title,
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     color: Colors.white,
-                    fontSize: 24, // Smaller font size for mobile
+                    fontSize: 32, // Smaller font size for mobile
                     fontWeight: FontWeight.w600,
                     fontFamily: 'Utendo',
                   ),
@@ -66,16 +67,16 @@ class HeroMobile extends StatelessWidget {
                     fontFamily: 'Utendo',
                   ),
                 ),
-                const SizedBox(height: 30), // Reduced spacing
+                const SizedBox(height: 20), // Reduced spacing
                 // Button
                 GestureDetector(
                   onTap: onButtonPressed,
                   child: Container(
-                    width: double.infinity, // Full width for mobile
-                    height: 50, // Reduced button height
+                    width: 200, // Full width for mobile
+                    height: 60, // Reduced button height
                     decoration: BoxDecoration(
                       color: Colors.black,
-                      borderRadius: BorderRadius.circular(25),
+                      borderRadius: BorderRadius.circular(30),
                     ),
                     child: Center(
                       child: Text(

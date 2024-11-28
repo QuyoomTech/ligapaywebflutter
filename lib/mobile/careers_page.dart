@@ -1,17 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:ligapay/widgets/custom_footer.dart';
+import 'package:ligapay/widgets/hero_mobile.dart';
 
 // ignore: use_key_in_widget_constructors
 class MobileCareersPage extends StatelessWidget {
-  @override
+
+@override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('LigaPay - Mobile'),
+      backgroundColor: const Color(0xffffffff),
+      body: DefaultTextStyle(
+        style: const TextStyle(fontFamily: 'Utendo'),
+        child: SingleChildScrollView(
+          child: Column(
+             mainAxisAlignment: MainAxisAlignment.center,
+    crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+               HeroMobile(
+       backgroundImageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lc1.png",
+          title: "Join us  as we improve \n financial wellness for millions",
+          subtitle: "We are an innovative fintech company .\n  Here, you can break free of bureaucracy, discover your spark, \n and bring creative ideas to life",
+          buttonText: "Join the waiting list",
+        onButtonPressed: () {
+          // Define what happens when the button is pressed
+          Navigator.pushNamed(context, '/nextPage');
+        },
       ),
-      body: const Center(
-        child: Text(
-          'Welcome to LigaPay - Mobile Home Page',
-          style: TextStyle(fontSize: 18),
+  
+    
+    CustomFooter(),
+            ],
+          ),
         ),
       ),
     );
