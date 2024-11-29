@@ -35,7 +35,6 @@ class CustomMobileCard3 extends StatelessWidget {
               Container(
                 width: 324,
                 height: 516,
-                
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(30),
@@ -46,7 +45,6 @@ class CustomMobileCard3 extends StatelessWidget {
                     Container(
                       width: 324,
                       height: 200,
-                     
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: NetworkImage(imageUrl),
@@ -60,11 +58,9 @@ class CustomMobileCard3 extends StatelessWidget {
                     Container(
                       width: 324,
                       height: 517,
-                   
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        
                         children: [
                           // Title
                           Text(
@@ -92,31 +88,31 @@ class CustomMobileCard3 extends StatelessWidget {
                           const SizedBox(height: 20),
                           // Button
                           GestureDetector(
-                  onTap: onButtonPressed,
-                  child: Container(
-                    width: 200,
-                    height: 60,
-                    // padding: const EdgeInsets.symmetric(
-                    //     horizontal: 30, vertical: 18),
-                    decoration: ShapeDecoration(
-                      color: Colors.black,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                    ),
-                    child: Center(
-                      child: Text(
-                        buttonText,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontFamily: 'Utendo',
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                            onTap: onButtonPressed,
+                            child: Container(
+                              width: 200,
+                              height: 60,
+                              // padding: const EdgeInsets.symmetric(
+                              //     horizontal: 30, vertical: 16),
+                              decoration: ShapeDecoration(
+                                color: Colors.black,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  buttonText,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontFamily: 'Utendo',
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ),

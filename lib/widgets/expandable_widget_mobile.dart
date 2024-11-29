@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-class CustomExpandableWidget extends StatefulWidget {
+class ExpandableWidgetMobile extends StatefulWidget {
   final String title;
   final String description;
 
-  const CustomExpandableWidget({
+  const ExpandableWidgetMobile({
     Key? key,
     required this.title,
     required this.description,
   }) : super(key: key);
 
   @override
-  _CustomExpandableWidgetState createState() => _CustomExpandableWidgetState();
+  _ExpandableWidgetMobileState createState() => _ExpandableWidgetMobileState();
 }
 
-class _CustomExpandableWidgetState extends State<CustomExpandableWidget> {
+class _ExpandableWidgetMobileState extends State<ExpandableWidgetMobile> {
   bool _isExpanded = false;
 
   void _toggleExpansion() {
@@ -26,8 +26,8 @@ class _CustomExpandableWidgetState extends State<CustomExpandableWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 1500,
-      padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 10),
+      width: 360,
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 16),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -36,8 +36,8 @@ class _CustomExpandableWidgetState extends State<CustomExpandableWidget> {
           GestureDetector(
             onTap: _toggleExpansion,
             child: Container(
-              width: 1400,
-              padding: const EdgeInsets.all(20),
+              width: 324,
+              padding: const EdgeInsets.all(16),
               decoration: ShapeDecoration(
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
@@ -59,7 +59,7 @@ class _CustomExpandableWidgetState extends State<CustomExpandableWidget> {
                       widget.title,
                       style: const TextStyle(
                         color: Color(0xFF010101),
-                        fontSize: 28,
+                        fontSize: 20,
                         fontFamily: 'Utendo',
                         fontWeight: FontWeight.w400,
                       ),
@@ -76,15 +76,15 @@ class _CustomExpandableWidgetState extends State<CustomExpandableWidget> {
           ),
           if (_isExpanded)
             Container(
-              width: 1400,
+              width: 324,
               height:100,
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 16),
               decoration: const ShapeDecoration(
                 color: Colors.white,
                shape: RoundedRectangleBorder(
   borderRadius: BorderRadius.only(
-    bottomLeft: Radius.circular(10),
-    bottomRight: Radius.circular(10),
+    bottomLeft: Radius.circular(20),
+    bottomRight: Radius.circular(20),
   ),
 ),
 
@@ -93,7 +93,7 @@ class _CustomExpandableWidgetState extends State<CustomExpandableWidget> {
                 widget.description,
                 style: const TextStyle(
                   color: Colors.black54,
-                  fontSize: 22,
+                  fontSize: 16,
                   fontWeight: FontWeight.w300,
                 ),
               ),

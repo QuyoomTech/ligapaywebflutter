@@ -39,8 +39,8 @@ class HeroDesktop extends StatelessWidget {
             height: 842,
             padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
             decoration: const BoxDecoration(
-             // color: Colors.black.withOpacity(0.3),
-            ),
+                // color: Colors.black.withOpacity(0.3),
+                ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.start,
@@ -48,38 +48,40 @@ class HeroDesktop extends StatelessWidget {
               children: [
                 const ResponsiveHeader(),
                 const SizedBox(height: 150),
-                // 
-               Flexible(
-      child: SizedBox(
-        width: double.infinity,
-        child: Text(
-          title,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: _getResponsiveFontSize(context, 30, 60, 90), // Dynamic font size
-            fontFamily: 'Utendo',
-            fontWeight: FontWeight.w600,
-            height: 1.0,
-          ),
-        ),
-      ),
-    ),
-    const SizedBox(height: 10), // Add some spacing if needed
-    // Subtitle Text
-    Flexible(
-      child: Text(
-        subtitle,
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: _getResponsiveFontSize(context, 16, 20, 24), // Dynamic font size
-          fontFamily: 'Utendo',
-          fontWeight: FontWeight.w400,
-          height: 1.2,
-        ),
-      ),
-    ),
+                //
+                Flexible(
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: Text(
+                      title,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: _getResponsiveFontSize(
+                            context, 30, 60, 90), // Dynamic font size
+                        fontFamily: 'Utendo',
+                        fontWeight: FontWeight.w600,
+                        height: 1.0,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10), // Add some spacing if needed
+                // Subtitle Text
+                Flexible(
+                  child: Text(
+                    subtitle,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: _getResponsiveFontSize(
+                          context, 16, 20, 24), // Dynamic font size
+                      fontFamily: 'Utendo',
+                      fontWeight: FontWeight.w400,
+                      height: 1.2,
+                    ),
+                  ),
+                ),
                 const SizedBox(height: 50),
                 GestureDetector(
                   onTap: onButtonPressed,
@@ -87,7 +89,7 @@ class HeroDesktop extends StatelessWidget {
                     width: 284,
                     height: 60,
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 30, vertical: 18),
+                        horizontal: 30, vertical: 16),
                     decoration: ShapeDecoration(
                       color: Colors.black,
                       shape: RoundedRectangleBorder(
@@ -115,7 +117,9 @@ class HeroDesktop extends StatelessWidget {
     );
   }
 }
-double _getResponsiveFontSize(BuildContext context, double mobileSize, double tabletSize, double desktopSize) {
+
+double _getResponsiveFontSize(BuildContext context, double mobileSize,
+    double tabletSize, double desktopSize) {
   double screenWidth = MediaQuery.of(context).size.width;
 
   if (screenWidth < 600) {

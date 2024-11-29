@@ -18,15 +18,16 @@ class CustomStackMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 324, // Maintain the width defined in the original widget
-      height: customStackHeight,
+      height: 400,
       child: Stack(
         children: [
+          
           // Recreate the container structure with custom height
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: NetworkImage(imageUrl),
-                fit: BoxFit.fill,
+                fit: BoxFit.fitHeight,
               ),
               borderRadius: BorderRadius.circular(20),
             ),
@@ -38,7 +39,7 @@ class CustomStackMobile extends StatelessWidget {
                 topRight: Radius.circular(20),
               ),
             ),
-            padding: const EdgeInsets.all(18),
+            padding: const EdgeInsets.all(16),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,6 +63,7 @@ class CustomStackMobile extends StatelessWidget {
                   ),
                   textAlign: TextAlign.start,
                 ),
+                const SizedBox(height: 20),
               ],
             ),
           ),

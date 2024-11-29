@@ -22,8 +22,7 @@ class MobileBusinessPage extends StatelessWidget {
     }
   }
 
- 
-   @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffffffff),
@@ -31,71 +30,79 @@ class MobileBusinessPage extends StatelessWidget {
         style: const TextStyle(fontFamily: 'Utendo'),
         child: SingleChildScrollView(
           child: Column(
-             mainAxisAlignment: MainAxisAlignment.center,
-    crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
-               HeroMobile(
-        backgroundImageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb1.png",
-          title: "Empower Your \n Business \n with LigaPay",
-          subtitle: "Streamline your business transactions and \n take control of your finances with a \n smart, flexible payment platform that’s \n built to grow with you.",
-          buttonText: "Join the waiting list",
-        onButtonPressed: () {
-          // Define what happens when the button is pressed
-          Navigator.pushNamed(context, '/nextPage');
-        },
-      ),
-   const TextHeaderMobile(
-  text: 'Why LigaPay?',
-),
-const CustomMobileCard1(
-               
-  title: 'Transfer Money in a Snap',
-  description: 'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
-   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
-  descriptionMaxLines: 6, 
-  imageHeight: 422, // Custom height for the image
-  imageWidth: 324, // Show up to 6 lines, adjust as needed
-),
-const CustomMobileCard1(
-               
-  title: 'Transfer Money in a Snap',
-  description: 'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
-   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
-  descriptionMaxLines: 6, 
-  imageHeight: 422, // Custom height for the image
-  imageWidth: 324, // Show up to 6 lines, adjust as needed
-),
-const CustomMobileCard1(
-               
-  title: 'Transfer Money in a Snap',
-  description: 'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
-   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
-  descriptionMaxLines: 6, 
-  imageHeight: 422, // Custom height for the image
-  imageWidth: 324, // Show up to 6 lines, adjust as needed
-),
-const CustomMobileCard1(
-               
-  title: 'Transfer Money in a Snap',
-  description: 'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
-   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
-  descriptionMaxLines: 6, 
-  imageHeight: 422, // Custom height for the image
-  imageWidth: 324, // Show up to 6 lines, adjust as needed
-),
-const SizedBox(height: 18),
-MobileFooterCard(
-  imageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/imgm14.png",
-  titleText: "Fast transfers\nwithout fee",
-  descriptionText: "No additional charges just unlimited transactions",
-  buttonText: "Join the waiting list",
-  onButtonPressed: () {
-    print("Button pressed!");
-  },
-),
-const SizedBox(height: 18),
-    CustomFooter(),
+              HeroMobile(
+                backgroundImageUrl:
+                    "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb1.png",
+                title: "Empower Your \n Business \n with LigaPay",
+                subtitle:
+                    "Streamline your business transactions and \n take control of your finances with a \n smart, flexible payment platform that’s \n built to grow with you.",
+                buttonText: "Join the waiting list",
+                onButtonPressed: () {
+                  // Define what happens when the button is pressed
+                  Navigator.pushNamed(context, '/nextPage');
+                },
+              ),
+              const TextHeaderMobile(
+                text: 'Why LigaPay?',
+              ),
+              const CustomMobileCard1(
+                title: 'Transfer Money in a Snap',
+                description:
+                    'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
+                imageUrl:
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
+                descriptionMaxLines: 6,
+                imageHeight: 422, // Custom height for the image
+                imageWidth: 324, // Show up to 6 lines, adjust as needed
+              ),
+              const CustomMobileCard1(
+                title: 'Transfer Money in a Snap',
+                description:
+                    'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
+                imageUrl:
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
+                descriptionMaxLines: 6,
+                imageHeight: 422, // Custom height for the image
+                imageWidth: 324, // Show up to 6 lines, adjust as needed
+              ),
+              const CustomMobileCard1(
+                title: 'Transfer Money in a Snap',
+                description:
+                    'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
+                imageUrl:
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
+                descriptionMaxLines: 6,
+                imageHeight: 422, // Custom height for the image
+                imageWidth: 324, // Show up to 6 lines, adjust as needed
+              ),
+              const CustomMobileCard1(
+                title: 'Transfer Money in a Snap',
+                description:
+                    'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
+                imageUrl:
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
+                descriptionMaxLines: 6,
+                imageHeight: 422, // Custom height for the image
+                imageWidth: 324, // Show up to 6 lines, adjust as needed
+              ),
+              const SizedBox(height: 16),
+              MobileFooterCard(
+                imageUrl:
+                    "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/imgm14.png",
+                titleText: "Fast transfers\nwithout fee",
+                descriptionText:
+                    "No additional charges just unlimited transactions",
+                buttonText: "Join the waiting list",
+                onButtonPressed: () {
+                  print("Button pressed!");
+                },
+              ),
+              const SizedBox(height: 16),
+              CustomFooter(),
             ],
           ),
         ),

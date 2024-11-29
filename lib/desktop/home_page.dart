@@ -138,9 +138,9 @@ Container(
           CustomStackHeightSquareImageDesktop(
             customStackHeight: 675,
             imageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img7.png",
-            title: "Advanced Security",
+            title: "Linked Banking",
             description:
-                "Your transactions are protected with top-notch encryption, ensuring peace of mind every step of the way.",
+                "Withdraw your funds directly to your local bank account, no matter where you are.",
           ),
           
     ],

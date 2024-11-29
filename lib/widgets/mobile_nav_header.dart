@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -89,7 +88,7 @@ class MobileNavHeader extends StatelessWidget {
   // Navigation Menu Item for Desktop
   Widget _buildNavItem(BuildContext context, String title, String route) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 18.0),
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: InkWell(
         onTap: () {
           context.go(route); // GoRouter navigation

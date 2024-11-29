@@ -13,8 +13,8 @@ class TextHeaderMobile extends StatelessWidget {
     this.textStyle,
     this.width = 360,
     this.height = 200,
-   // this.padding = const EdgeInsets.all(150),
-    this. padding =const EdgeInsets.symmetric(horizontal: 18, vertical: 20),
+    // this.padding = const EdgeInsets.all(150),
+    this.padding = const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
   }) : super(key: key);
 
   @override
@@ -32,7 +32,7 @@ class TextHeaderMobile extends StatelessWidget {
               color: Color(0xFF010101),
               fontSize: 32,
               fontWeight: FontWeight.w500,
-               height: 1.0,
+              height: 1.0,
             ),
       ),
     );

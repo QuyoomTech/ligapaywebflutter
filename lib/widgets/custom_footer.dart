@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CustomFooter extends StatelessWidget {
@@ -9,7 +8,7 @@ class CustomFooter extends StatelessWidget {
     // Determine padding based on screen size
     EdgeInsets padding = screenWidth > 600
         ? const EdgeInsets.all(50) // Desktop
-        : const EdgeInsets.all(18); // Mobile
+        : const EdgeInsets.all(16); // Mobile
 
     return Column(
       children: [
@@ -253,11 +252,11 @@ class CustomFooter extends StatelessWidget {
   Widget _buildSocialIcon(IconData icon) {
     return CircleAvatar(
       backgroundColor: Colors.white,
-      radius: 18,
+      radius: 16,
       child: Icon(
         icon,
         color: Colors.black,
-        size: 18,
+        size: 16,
       ),
     );
   }

@@ -19,7 +19,6 @@ class MobileFooterCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      
       children: [
         Container(
           width: 324,
@@ -31,65 +30,65 @@ class MobileFooterCard extends StatelessWidget {
             ),
             borderRadius: BorderRadius.circular(20),
           ),
-        
           child: Padding(
-  padding: const EdgeInsets.all(16.0), // Add 16 pixels of padding on all sides
-  child: Column(
-    children: [
-      const SizedBox(height: 50),
-      Text(
-        titleText,
-        textAlign: TextAlign.center,
-        style: const TextStyle(
-          color: Colors.white,
-          fontSize: 30,
-          fontFamily: 'Utendo', // Make sure it's in pubspec.yaml
-          fontWeight: FontWeight.w600,
-          height: 1.03,
-        ),
-      ),
-      const SizedBox(height: 20), // Add spacing between widgets
-      Text(
-        descriptionText,
-        textAlign: TextAlign.center,
-        style: const TextStyle(
-          color: Colors.white70,
-          fontSize: 18,
-          fontFamily: 'Utendo',
-          fontWeight: FontWeight.w400,
-          height: 1,
-        ),
-      ),
-      const SizedBox(height: 60), // Add spacing between widgets
-      GestureDetector(
-        onTap: onButtonPressed,
-        child: Container(
-          width: 248,
-          height: 60,
-          padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 12),
-          decoration: BoxDecoration(
-            color: Colors.black,
-            borderRadius: BorderRadius.circular(30),
-          ),
-          child: Center(
-            child: Text(
-              buttonText,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontFamily: 'Utendo',
-                fontWeight: FontWeight.w500,
-                height: 1.23,
-              ),
+            padding: const EdgeInsets.all(
+                16.0), // Add 16 pixels of padding on all sides
+            child: Column(
+              children: [
+                const SizedBox(height: 50),
+                Text(
+                  titleText,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 30,
+                    fontFamily: 'Utendo', // Make sure it's in pubspec.yaml
+                    fontWeight: FontWeight.w600,
+                    height: 1.03,
+                  ),
+                ),
+                const SizedBox(height: 20), // Add spacing between widgets
+                Text(
+                  descriptionText,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    color: Colors.white70,
+                    fontSize: 16,
+                    fontFamily: 'Utendo',
+                    fontWeight: FontWeight.w400,
+                    height: 1,
+                  ),
+                ),
+                const SizedBox(height: 60), // Add spacing between widgets
+                GestureDetector(
+                  onTap: onButtonPressed,
+                  child: Container(
+                    width: 248,
+                    height: 60,
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 35, vertical: 12),
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    child: Center(
+                      child: Text(
+                        buttonText,
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontFamily: 'Utendo',
+                          fontWeight: FontWeight.w500,
+                          height: 1.23,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
-        ),
-      ),
-    ],
-  ),
-),
-
         ),
       ],
     );

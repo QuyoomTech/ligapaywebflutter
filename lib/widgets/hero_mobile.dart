@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ligapay/widgets/mobile_nav_header.dart';
 
-
 class HeroMobile extends StatelessWidget {
   final String backgroundImageUrl;
   final String title;
@@ -29,22 +28,24 @@ class HeroMobile extends StatelessWidget {
           decoration: BoxDecoration(
             image: DecorationImage(
               image: NetworkImage(backgroundImageUrl),
-              fit: BoxFit.cover, // Use cover for better scaling on small screens
+              fit:
+                  BoxFit.cover, // Use cover for better scaling on small screens
             ),
           ),
         ),
         // Black overlay and centered content
         Positioned.fill(
           child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10), // Reduced padding for mobile
-           // color: Colors.black.withOpacity(0.4), // Semi-transparent overlay
+            padding: const EdgeInsets.symmetric(
+                horizontal: 16, vertical: 10), // Reduced padding for mobile
+            // color: Colors.black.withOpacity(0.4), // Semi-transparent overlay
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 // Title
-                const MobileNavHeader(), 
-                const SizedBox(height:200),
+                const MobileNavHeader(),
+                const SizedBox(height: 200),
                 Text(
                   title,
                   textAlign: TextAlign.center,
