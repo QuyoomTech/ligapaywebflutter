@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ligapay/desktop/contact_page.dart';
+
 import 'package:ligapay/widgets/custom_desktop_card2.dart';
 import 'package:ligapay/widgets/custom_footer.dart';
 import 'package:ligapay/widgets/footer_desktop_card.dart';
@@ -36,7 +36,6 @@ class DesktopBusinessPage extends StatelessWidget {
   text: 'Why Business Account',
 ),
               const CustomDesktopCard1(
-               
   title: 'Fast Withdrawals',
   description: 'Access your funds quickly and efficiently, ensuring you have the cash flow needed to run your business smoothly.',
    imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb2.png',

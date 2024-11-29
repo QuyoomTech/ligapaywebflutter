@@ -62,7 +62,7 @@ class HeroMobile extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     color: Colors.white,
-                    fontSize: 14, // Smaller font size for mobile
+                    fontSize: 16, // Smaller font size for mobile
                     fontWeight: FontWeight.w400,
                     fontFamily: 'Utendo',
                   ),

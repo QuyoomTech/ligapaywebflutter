@@ -74,7 +74,7 @@ const CustomDesktopCard1(
   imageWidth: 675,  // Show up to 6 lines, adjust as needed
 ),        
               const SizedBox(height: 50),
-             FooterDesktopCard(
+         FooterDesktopCard(
   backgroundImage: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp6.png',
   title: 'Fast transfers without fee',
   subtitle: 'No additional charges just unlimited transactions',
@@ -82,7 +82,7 @@ const CustomDesktopCard1(
   onButtonPressed: () {
     print('Button Pressed');
   },
-),
+),    
               CustomFooter(),
             ],
           ),

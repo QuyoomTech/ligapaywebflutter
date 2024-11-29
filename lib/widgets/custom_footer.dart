@@ -6,12 +6,17 @@ class CustomFooter extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
 
+    // Determine padding based on screen size
+    EdgeInsets padding = screenWidth > 600
+        ? const EdgeInsets.all(50) // Desktop
+        : const EdgeInsets.all(18); // Mobile
+
     return Column(
       children: [
         Container(
           width: double.infinity,
           color: const Color(0xFF262626),
-          padding: const EdgeInsets.all(50),
+          padding: padding,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -170,7 +175,7 @@ class CustomFooter extends StatelessWidget {
         Text(
           'Useful Links',
           style: TextStyle(
-            color: Colors .white,
+            color: Colors.white,
             fontSize: 36,
           ),
         ),
@@ -229,7 +234,7 @@ class CustomFooter extends StatelessWidget {
         SizedBox(height: 10),
         Text(
           '4646 Poplar Ave, STE 445,\nMemphis, TN 38117, USA.',
-          style: TextStyle( color: Color(0xFF888888), fontSize: 20),
+          style: TextStyle(color: Color(0xFF888888), fontSize: 20),
         ),
         SizedBox(height: 30),
         Text(
@@ -239,7 +244,7 @@ class CustomFooter extends StatelessWidget {
         SizedBox(height: 10),
         Text(
           'support@LigaPay.com',
-          style: TextStyle( color: Color(0xFF888888), fontSize: 20),
+          style: TextStyle(color: Color(0xFF888888), fontSize: 20),
         ),
       ],
     );
@@ -253,27 +258,6 @@ class CustomFooter extends StatelessWidget {
         icon,
         color: Colors.black,
         size: 18,
-      ),
-    );
-  }
-
-  Widget _buildHeading(String text) {
-    return Text(
-      text,
-      style: const TextStyle(
-        color: Colors.white,
-        fontSize: 16,
-        fontWeight: FontWeight.bold,
-      ),
-    );
-  }
-
-  Widget _buildLink(String text) {
-    return Text(
-      text,
-      style: const TextStyle(
-        color: Colors.white70,
-        fontSize: 14,
       ),
     );
   }

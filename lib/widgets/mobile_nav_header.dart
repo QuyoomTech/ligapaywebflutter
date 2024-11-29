@@ -13,7 +13,7 @@ class MobileNavHeader extends StatelessWidget {
     return Container(
       width: double.infinity,
       color: Colors.transparent, // Make the background transparent
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      padding: const EdgeInsets.symmetric(horizontal: 0.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -21,8 +21,8 @@ class MobileNavHeader extends StatelessWidget {
           Row(
             children: [
               Container(
-                width: 100,
-                height: 26,
+                width: 140,
+                height: 36,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: NetworkImage(

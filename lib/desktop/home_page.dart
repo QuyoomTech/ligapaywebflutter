@@ -294,7 +294,7 @@ const CustomExpandableWidget(
 
               FooterDesktopCard(
                 backgroundImage:
-                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img1.png',
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img14.png',
                 title: 'LigaPay Business Account',
                 subtitle:
                     'The smart choice for businesses that demand speed, security, and scalability.',

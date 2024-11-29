@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ligapay/widgets/custom_footer.dart';
+import 'package:ligapay/widgets/custom_mobile_card1.dart';
+
+import 'package:ligapay/widgets/footer_mobile_card.dart';
 import 'package:ligapay/widgets/hero_mobile.dart';
 
 class MobileRemitancePage extends StatelessWidget {
@@ -27,8 +30,62 @@ class MobileRemitancePage extends StatelessWidget {
           Navigator.pushNamed(context, '/nextPage');
         },
       ),
-  
-    
+ const SizedBox(height: 18),
+ const CustomMobileCard1(
+               
+  title: 'Transfer Money in a Snap',
+  description: 'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
+   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
+  descriptionMaxLines: 6, 
+  imageHeight: 422, // Custom height for the image
+  imageWidth: 324, // Show up to 6 lines, adjust as needed
+),
+const CustomMobileCard1(
+               
+  title: 'Transfer Money in a Snap',
+  description: 'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
+   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
+  descriptionMaxLines: 6, 
+  imageHeight: 422, // Custom height for the image
+  imageWidth: 324, // Show up to 6 lines, adjust as needed
+),
+const CustomMobileCard1(
+               
+  title: 'Transfer Money in a Snap',
+  description: 'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
+   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
+  descriptionMaxLines: 6, 
+  imageHeight: 422, // Custom height for the image
+  imageWidth: 324, // Show up to 6 lines, adjust as needed
+),
+const CustomMobileCard1(
+               
+  title: 'Transfer Money in a Snap',
+  description: 'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
+   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
+  descriptionMaxLines: 6, 
+  imageHeight: 422, // Custom height for the image
+  imageWidth: 324, // Show up to 6 lines, adjust as needed
+),
+const CustomMobileCard1(
+               
+  title: 'Transfer Money in a Snap',
+  description: 'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
+   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
+  descriptionMaxLines: 6, 
+  imageHeight: 422, // Custom height for the image
+  imageWidth: 324, // Show up to 6 lines, adjust as needed
+),
+MobileFooterCard(
+  imageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/imgm14.png",
+  titleText: "Fast transfers\nwithout fee",
+  descriptionText: "No additional charges just unlimited transactions",
+  buttonText: "Join the waiting list",
+  onButtonPressed: () {
+    print("Button pressed!");
+  },
+),
+const SizedBox(height: 18),
     CustomFooter(),
             ],
           ),

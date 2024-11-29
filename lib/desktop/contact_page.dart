@@ -1,6 +1,5 @@
 // ignore_for_file: use_key_in_widget_constructors
 import 'package:flutter/material.dart';
-import 'package:ligapay/widgets/custom_desktop_card3.dart';
 import 'package:ligapay/widgets/custom_footer.dart';
 import 'package:ligapay/widgets/footer_desktop_card.dart';
 import 'package:ligapay/widgets/hero_desktop.dart';
