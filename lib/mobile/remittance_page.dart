@@ -4,6 +4,7 @@ import 'package:ligapay/widgets/custom_mobile_card1.dart';
 
 import 'package:ligapay/widgets/footer_mobile_card.dart';
 import 'package:ligapay/widgets/hero_mobile.dart';
+import 'package:ligapay/widgets/text_header_mobile.dart';
 
 class MobileRemitancePage extends StatelessWidget {
   const MobileRemitancePage({super.key});
@@ -33,55 +34,58 @@ class MobileRemitancePage extends StatelessWidget {
                   Navigator.pushNamed(context, '/nextPage');
                 },
               ),
-              const SizedBox(height: 16),
+             // const SizedBox(height: 16),
+               const TextHeaderMobile(
+                text: 'Why Choose LigaRemit ?',
+              ),
               const CustomMobileCard1(
-                title: 'Transfer Money in a Snap',
+                title: 'Best Exchange Rates',
                 description:
-                    'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
+                    'Get the most out of every transaction with our highly competitive exchange rates.',
                 imageUrl:
-                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lr2.png',
                 descriptionMaxLines: 6,
-                imageHeight: 422, // Custom height for the image
+                imageHeight: 280, // Custom height for the image
                 imageWidth: 324, // Show up to 6 lines, adjust as needed
               ),
               const CustomMobileCard1(
-                title: 'Transfer Money in a Snap',
+                title: 'Instant Transfers',
                 description:
-                    'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
+                    'Send money globally in seconds with our reliable and efficient transfer system.',
                 imageUrl:
-                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lr3.png',
                 descriptionMaxLines: 6,
-                imageHeight: 422, // Custom height for the image
+                imageHeight: 280, // Custom height for the image
                 imageWidth: 324, // Show up to 6 lines, adjust as needed
               ),
               const CustomMobileCard1(
-                title: 'Transfer Money in a Snap',
+                title: 'Global Reach',
                 description:
-                    'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
+                    'Transfer funds to any bank account, in any country, without limitations.',
                 imageUrl:
-                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lr4.png',
                 descriptionMaxLines: 6,
-                imageHeight: 422, // Custom height for the image
+                imageHeight: 250, // Custom height for the image
                 imageWidth: 324, // Show up to 6 lines, adjust as needed
               ),
               const CustomMobileCard1(
-                title: 'Transfer Money in a Snap',
+                title: 'Save on Every Transaction',
                 description:
-                    'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
+                    'Keep more of your money with our low fees and great rates—helping you save on every transfer.',
                 imageUrl:
-                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lr5.png',
                 descriptionMaxLines: 6,
-                imageHeight: 422, // Custom height for the image
+                imageHeight: 200, // Custom height for the image
                 imageWidth: 324, // Show up to 6 lines, adjust as needed
               ),
               const CustomMobileCard1(
-                title: 'Transfer Money in a Snap',
+                title: 'Secure and Safe',
                 description:
-                    'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
+                    'Rest easy knowing that your money is protected by our robust security measures.',
                 imageUrl:
-                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lr6.png',
                 descriptionMaxLines: 6,
-                imageHeight: 422, // Custom height for the image
+                imageHeight: 280, // Custom height for the image
                 imageWidth: 324, // Show up to 6 lines, adjust as needed
               ),
               MobileFooterCard(

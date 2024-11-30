@@ -50,43 +50,43 @@ class MobileBusinessPage extends StatelessWidget {
                 text: 'Why LigaPay?',
               ),
               const CustomMobileCard1(
-                title: 'Transfer Money in a Snap',
+                title: 'Fast Withdrawals',
                 description:
-                    'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
+                    'Access your funds quickly and efficiently, ensuring you have the cash flow needed to run your business smoothly.',
                 imageUrl:
-                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb2.png',
                 descriptionMaxLines: 6,
-                imageHeight: 422, // Custom height for the image
+                imageHeight: 324, // Custom height for the image
                 imageWidth: 324, // Show up to 6 lines, adjust as needed
               ),
               const CustomMobileCard1(
-                title: 'Transfer Money in a Snap',
+                title: 'Share Payment Links Instantly',
                 description:
-                    'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
+                    'Make it simple for your clients to pay—just send them a link, and they can complete the payment in moments.',
                 imageUrl:
-                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb4.png?width=567&height=594',
                 descriptionMaxLines: 6,
-                imageHeight: 422, // Custom height for the image
+                imageHeight: 324, // Custom height for the image
                 imageWidth: 324, // Show up to 6 lines, adjust as needed
               ),
               const CustomMobileCard1(
-                title: 'Transfer Money in a Snap',
+                title: 'Unlimited Transactions',
                 description:
-                    'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
+                    'Scale your business without restrictions. LigaPay offers unlimited transactions so you can focus on growth',
                 imageUrl:
-                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb5.png?width=200&height=200',
                 descriptionMaxLines: 6,
-                imageHeight: 422, // Custom height for the image
+                imageHeight: 324, // Custom height for the image
                 imageWidth: 324, // Show up to 6 lines, adjust as needed
               ),
               const CustomMobileCard1(
-                title: 'Transfer Money in a Snap',
+                title: 'Manage Risk with Confidence',
                 description:
-                    'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
+                    'Built-in risk management tools help safeguard your business, keeping your transactions secure and your peace of mind intact.',
                 imageUrl:
-                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb6.png',
                 descriptionMaxLines: 6,
-                imageHeight: 422, // Custom height for the image
+                imageHeight: 324, // Custom height for the image
                 imageWidth: 324, // Show up to 6 lines, adjust as needed
               ),
               const SizedBox(height: 16),

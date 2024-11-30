@@ -23,10 +23,10 @@ class CustomMobileCard1 extends StatelessWidget {
     this.titleStyle,
     this.descriptionStyle,
     this.width = 360,
-    this.height = 660,
+    this.height = 500,
     this.padding = 16,
     this.imageWidth = 324,
-    this.imageHeight = 422,
+    this.imageHeight = 250,
     this.spacing = 10,
     this.descriptionMaxLines = 6,
     this.titleMaxLines = 2,
@@ -60,7 +60,7 @@ class CustomMobileCard1 extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
             ),
           ),
-          // const SizedBox(height: 23),
+          const SizedBox(height: 6),
           SizedBox(
             width: double.infinity,
             child: Text(
@@ -70,16 +70,17 @@ class CustomMobileCard1 extends StatelessWidget {
                     color: Color(0xFF888888),
                     fontSize: 16,
                     fontFamily: 'Utendo',
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w400,
                     height: 1.5,
                   ),
               maxLines: descriptionMaxLines,
               overflow: TextOverflow.ellipsis,
             ),
           ),
+           const SizedBox(height: 20),
           Container(
             width: imageWidth,
-            height: imageHeight,
+            height: 324,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: NetworkImage(imageUrl),

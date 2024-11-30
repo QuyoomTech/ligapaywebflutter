@@ -8,7 +8,7 @@ import 'package:ligapay/widgets/expandable_widget_mobile.dart';
 import 'package:ligapay/widgets/footer_mobile_card.dart';
 
 import 'package:ligapay/widgets/hero_mobile.dart';
-import 'package:ligapay/widgets/text_header_desktop.dart';
+
 import 'package:ligapay/widgets/text_header_mobile.dart';
 
 class MobileHomePage extends StatelessWidget {
@@ -129,6 +129,9 @@ class MobileHomePage extends StatelessWidget {
                     "Your transactions are protected with top-notch encryption, ensuring peace of mind every step of the way.",
               ),
               const SizedBox(height: 16),
+               const TextHeaderMobile(
+                text: 'Your money stay \n safe',
+              ),
               const CustomStackMobile(
                 customStackHeight: 400,
                 imageUrl:
