@@ -7,7 +7,7 @@ class MobileContactPage extends StatelessWidget {
 @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffffffff),
+      backgroundColor: const Color(0xffF2F3FF),
       body: DefaultTextStyle(
         style: const TextStyle(fontFamily: 'Utendo'),
         child: SingleChildScrollView(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ligapay/widgets/custom_footer.dart';
 import 'package:ligapay/widgets/custom_mobile_card1.dart';
+import 'package:ligapay/widgets/custom_mobile_card3.dart';
 import 'package:ligapay/widgets/custom_stack_mobile.dart';
 
 import 'package:ligapay/widgets/expandable_widget_mobile.dart';
@@ -17,7 +18,7 @@ class MobileHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffffffff),
+      backgroundColor: const Color(0xffF2F3FF),
       body: DefaultTextStyle(
         style: const TextStyle(fontFamily: 'Utendo'),
         child: SingleChildScrollView(
@@ -68,12 +69,21 @@ class MobileHomePage extends StatelessWidget {
               const CustomStackMobile(
                 customStackHeight: 400,
                 imageUrl:
-                    "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img4.png",
+                    "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/imgm4.png",
                 title: "Effortless Money Transfers",
                 description:
                     "Send money to anyone using their email, phone number, or username—no bank details needed.",
               ),
-              const SizedBox(height: 16),
+            
+        CustomMobileCard3(
+  title: 'Seamless Payment Collection',
+  description: 'Accept payments with a unique link or QR code, tailored for each transaction.',
+  buttonText: 'Collect now',
+  imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img5.png',
+  onButtonPressed: () {
+    print('Apply button clicked!');
+  },
+),
               const CustomStackMobile(
                 customStackHeight: 324,
                 imageUrl:
@@ -86,12 +96,21 @@ class MobileHomePage extends StatelessWidget {
               const CustomStackMobile(
                 customStackHeight: 400,
                 imageUrl:
-                    "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img7.png",
+                    "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/imgm7.png",
                 title: "Linked Banking",
                 description:
                     "Withdraw your funds directly to your local bank account, no matter where you are.",
               ),
               const SizedBox(height: 16),
+              CustomMobileCard3(
+  title: 'Low-Cost Transactions',
+  description: 'Enjoy a minimal transaction fee of just 0.5%, with your transactions for the first 3 months free.',
+  buttonText: 'Claim offer now',
+  imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img8.png',
+  onButtonPressed: () {
+    print('Apply button clicked!');
+  },
+),
               const CustomStackMobile(
                 customStackHeight: 400,
                 imageUrl:

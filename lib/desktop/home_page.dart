@@ -149,7 +149,7 @@ Container(
 CustomDesktopCard3(
   title: 'Low-Cost Transactions',
   description: 'Enjoy a minimal transaction fee of just 0.5%, with your transactions for the first 3 months free.',
-  buttonText: 'Apply now',
+  buttonText: 'Claim offer now',
   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img8.png',
   onButtonPressed: () {
     print('Claim offer now');

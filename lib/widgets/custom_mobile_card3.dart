@@ -20,24 +20,25 @@ class CustomMobileCard3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
+      // mainAxisAlignment: MainAxisAlignment.start,
+      // crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          width: 360,
-          height: 617,
+      // padding: EdgeInsets.all(16), // Adds padding inside the container
+      // margin: EdgeInsets.all(16),
 
-          padding: const EdgeInsets.symmetric(horizontal: 50),
+          
           // decoration: const BoxDecoration(color: Color(0xFF7DC5E9)),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            //mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
-                width: 324,
-                height: 516,
+              // padding: EdgeInsets.all(16), // Adds padding inside the container
+      margin: EdgeInsets.all(16),
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(20),
                 ),
                 child: Column(
                   children: [
@@ -57,8 +58,10 @@ class CustomMobileCard3 extends StatelessWidget {
                     // Right Content Section
                     Container(
                       width: 324,
-                      height: 517,
+                    //  height: 300,
+                      padding: const EdgeInsets.symmetric(horizontal: 16 ,vertical:16),
                       child: Column(
+                        mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -82,7 +85,7 @@ class CustomMobileCard3 extends StatelessWidget {
                               fontSize: 16,
                               fontFamily: 'Utendo',
                               fontWeight: FontWeight.w400,
-                              height: 1.20,
+                              height: 1.0,
                             ),
                           ),
                           const SizedBox(height: 20),

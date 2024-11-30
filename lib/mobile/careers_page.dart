@@ -28,7 +28,7 @@ class MobileCareersPage extends StatelessWidget {
           Navigator.pushNamed(context, '/nextPage');
         },
       ),
-  
+  const SizedBox(height:18),
   CustomMobileCard3(
   title: 'Ready to join today?',
   description: 'Ligapay is a community of amazing people who change the face of the fintech world of tomorrow. Apply now!',
@@ -38,6 +38,7 @@ class MobileCareersPage extends StatelessWidget {
     print('Apply button clicked!');
   },
 ),
+const SizedBox(height:18),
     CustomFooter(),
             ],
           ),
