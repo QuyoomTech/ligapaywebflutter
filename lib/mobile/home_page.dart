@@ -44,7 +44,8 @@ class MobileHomePage extends StatelessWidget {
 },
 
               ),
-              
+               const SizedBox(height: 16),
+              CustomFooter(),
               const CustomMobileCard1(
                 title: 'Seamless Payments, Anytime, Anywhere.',
                 description:

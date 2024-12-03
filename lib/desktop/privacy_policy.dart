@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:go_router/go_router.dart';
 class PrivacyPolicyPage extends StatelessWidget {
 @override
 Widget build(BuildContext context) {
@@ -8,7 +8,11 @@ Widget build(BuildContext context) {
       leading: IconButton(
         icon: Icon(Icons.arrow_back),
         onPressed: () {
-          Navigator.pop(context);
+          // Handle button press here
+          print("Button Pressed");
+
+          // Navigate to the contact page using GoRouter
+          context.go('/');
         },
       ),
       title: Text('Privacy Policy'),

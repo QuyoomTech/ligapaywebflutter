@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class TermsAndConditionsPage extends StatelessWidget {
   @override
@@ -8,8 +9,12 @@ class TermsAndConditionsPage extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context);
-          },
+          // Handle button press here
+          print("Button Pressed");
+
+          // Navigate to the contact page using GoRouter
+          context.go('/');
+        },
         ),
         title: Text('Terms and Conditions'),
       ),
