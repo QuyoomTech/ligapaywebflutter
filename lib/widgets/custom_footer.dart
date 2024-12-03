@@ -1,5 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
+import 'package:url_launcher/url_launcher.dart';
 
+void _launchUrl(String url) async {
+  final Uri uri = Uri.parse(url);
+  if (await canLaunchUrl(uri)) {
+    await launchUrl(uri, mode: LaunchMode.externalApplication);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
 class CustomFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,6 +23,7 @@ class CustomFooter extends StatelessWidget {
 
     return Column(
       children: [
+        // Top Section
         Container(
           width: double.infinity,
           color: const Color(0xFF262626),
@@ -19,14 +31,13 @@ class CustomFooter extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Top Section
               screenWidth > 600
                   ? Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         _buildColumn1(),
-                        _buildColumn2(),
+                        _buildColumn2(context),
                         _buildColumn3(),
                         _buildColumn4(),
                       ],
@@ -36,7 +47,7 @@ class CustomFooter extends StatelessWidget {
                       children: [
                         _buildColumn1(),
                         const SizedBox(height: 40),
-                        _buildColumn2(),
+                        _buildColumn2(context),
                         const SizedBox(height: 40),
                         _buildColumn3(),
                         const SizedBox(height: 40),
@@ -52,13 +63,10 @@ class CustomFooter extends StatelessWidget {
           width: double.infinity,
           height: 61,
           padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
-          clipBehavior: Clip.antiAlias,
           decoration: const BoxDecoration(color: Colors.black),
-          child: const Row(
-            mainAxisSize: MainAxisSize.min,
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
+            children: const [
               Text(
                 '© LigaPay 2024',
                 textAlign: TextAlign.center,
@@ -67,7 +75,6 @@ class CustomFooter extends StatelessWidget {
                   fontSize: 16,
                   fontFamily: 'Utendo',
                   fontWeight: FontWeight.w400,
-                  height: 0.08,
                 ),
               ),
             ],
@@ -105,62 +112,89 @@ class CustomFooter extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 10),
-        Row(
-          children: [
-            _buildSocialIcon(Icons.set_meal),
-            const SizedBox(width: 10),
-            _buildSocialIcon(Icons.camera_alt_outlined), // Instagram Icon
-            const SizedBox(width: 10),
-            _buildSocialIcon(Icons.facebook),
-            const SizedBox(width: 10),
-            _buildSocialIcon(Icons.toc), // Substitute for X (Twitter)
-          ],
-        ),
+       Row(
+  children: [
+    GestureDetector(
+      onTap: () => _launchUrl('https://www.instagram.com/ligapay'),
+      child: _buildSocialIcon(FontAwesomeIcons.instagram), // Instagram Icon
+    ),
+    const SizedBox(width: 10),
+    GestureDetector(
+      onTap: () => _launchUrl('https://www.linkedin.com/in/ligapay'),
+      child: _buildSocialIcon(FontAwesomeIcons.linkedin), // LinkedIn Icon
+    ),
+    const SizedBox(width: 10),
+    GestureDetector(
+      onTap: () => _launchUrl('https://www.twitter.com/ligapay'),
+      child: _buildSocialIcon(FontAwesomeIcons.twitter), // X Icon (formerly Twitter)
+    ),
+    const SizedBox(width: 10),
+    GestureDetector(
+      onTap: () => _launchUrl('https://www.facebook.com/ligapay'),
+      child: _buildSocialIcon(FontAwesomeIcons.facebook), // Facebook Icon
+    ),
+  ],
+),
+
+
+
       ],
     );
   }
 
-  Widget _buildColumn2() {
-    return const Column(
+  Widget _buildColumn2(BuildContext context) {
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'Legal',
+        const Text(
+          'About Us',
           style: TextStyle(
             color: Colors.white,
             fontSize: 36,
           ),
         ),
-        SizedBox(height: 30),
-        Text(
-          'Home',
-          style: TextStyle(
-            color: Color(0xFF888888),
-            fontSize: 20,
+        const SizedBox(height: 30),
+        InkWell(
+          onTap: () => context.go('/'), // Navigate to Home page
+          child: const Text(
+            'Home',
+            style: TextStyle(
+              color: Color(0xFF888888),
+              fontSize: 20,
+            ),
           ),
         ),
-        SizedBox(height: 10),
-        Text(
-          'About us',
-          style: TextStyle(
-            color: Color(0xFF888888),
-            fontSize: 20,
+        const SizedBox(height: 10),
+        InkWell(
+          onTap: () => context.go('/about'), // Navigate to About Us page
+          child: const Text(
+            'About Us',
+            style: TextStyle(
+              color: Color(0xFF888888),
+              fontSize: 20,
+            ),
           ),
         ),
-        SizedBox(height: 10),
-        Text(
-          'Privacy Policy',
-          style: TextStyle(
-            color: Color(0xFF888888),
-            fontSize: 20,
+        const SizedBox(height: 10),
+        InkWell(
+          onTap: () => context.go('/privacy'), // Navigate to Privacy Policy page
+          child: const Text(
+            'Privacy Policy',
+            style: TextStyle(
+              color: Color(0xFF888888),
+              fontSize: 20,
+            ),
           ),
         ),
-        SizedBox(height: 10),
-        Text(
-          'Terms and Conditions',
-          style: TextStyle(
-            color: Color(0xFF888888),
-            fontSize: 20,
+        const SizedBox(height: 10),
+        InkWell(
+          onTap: () => context.go('/terms'), // Navigate to Terms and Conditions page
+          child: const Text(
+            'Terms and Conditions',
+            style: TextStyle(
+              color: Color(0xFF888888),
+              fontSize: 20,
+            ),
           ),
         ),
       ],

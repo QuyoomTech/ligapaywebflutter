@@ -1,6 +1,8 @@
 import 'dart:core';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:ligapay/desktop/contact_page.dart';
+
 import 'package:ligapay/widgets/custom_desktop_card2.dart';
 import 'package:ligapay/widgets/custom_desktop_card3.dart';
 import 'package:ligapay/widgets/expandable_widget.dart';
@@ -50,10 +52,15 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
           title: "Welcome to \n LigaPay",
           subtitle: "Your All-in-One Financial Solution\nDon’t miss out—secure your spot now!",
           buttonText: "Join the waiting list",
-          onButtonPressed: () {
-            // Handle button press here
-            print("Button Pressed");
-          },
+         onButtonPressed: () {
+  // Handle button press here
+  print("Button Pressed");
+
+  // Navigate to the contact page using GoRouter
+  context.go('/contact');
+},
+
+
         ),
           
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:ligapay/widgets/custom_footer.dart';
 import 'package:ligapay/widgets/custom_mobile_card3.dart';
 import 'package:ligapay/widgets/hero_mobile.dart';
@@ -35,8 +36,13 @@ class MobileCareersPage extends StatelessWidget {
   buttonText: 'Apply now',
   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lc2.png',
   onButtonPressed: () {
-    print('Apply button clicked!');
-  },
+  // Handle button press here
+  print("Button Pressed");
+
+  // Navigate to the contact page using GoRouter
+  context.go('/contact');
+},
+
 ),
 const SizedBox(height:18),
     CustomFooter(),

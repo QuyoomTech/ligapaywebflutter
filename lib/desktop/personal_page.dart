@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ligapay/desktop/contact_page.dart';
+import 'package:go_router/go_router.dart';
 import 'package:ligapay/widgets/custom_desktop_card1.dart';
 import 'package:ligapay/widgets/custom_desktop_card2.dart';
 import 'package:ligapay/widgets/custom_footer.dart';
@@ -29,9 +29,12 @@ class DesktopPersonalPage extends StatelessWidget {
           subtitle: "With LigaPay, managing your personal \n finances is easier, smarter, and more secure.",
           buttonText: "Join the waiting list",
           onButtonPressed: () {
-            // Handle button press here
-            print("Button Pressed");
-          },
+  // Handle button press here
+  print("Button Pressed");
+
+  // Navigate to the contact page using GoRouter
+  context.go('/contact');
+},
         ),
               
               const TextHeaderDesktop(
@@ -79,9 +82,14 @@ const CustomDesktopCard1(
   title: 'Fast transfers without fee',
   subtitle: 'No additional charges just unlimited transactions',
   buttonText: 'Join the waiting list',
-  onButtonPressed: () {
-    print('Button Pressed');
-  },
+ onButtonPressed: () {
+  // Handle button press here
+  print("Button Pressed");
+
+  // Navigate to the contact page using GoRouter
+  context.go('/contact');
+},
+
 ),    
               CustomFooter(),
             ],

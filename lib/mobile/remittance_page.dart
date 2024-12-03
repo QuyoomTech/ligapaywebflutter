@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:ligapay/widgets/custom_footer.dart';
 import 'package:ligapay/widgets/custom_mobile_card1.dart';
 
@@ -29,10 +30,14 @@ class MobileRemitancePage extends StatelessWidget {
                 subtitle:
                     "LigaRemit makes sending money across \n borders easier than ever.  With competitive  \n exchange rates and lightning-fast transfers,\n you can send money to any bank,\n anywhere in the world.",
                 buttonText: "Join the waiting list",
-                onButtonPressed: () {
-                  // Define what happens when the button is pressed
-                  Navigator.pushNamed(context, '/nextPage');
-                },
+               onButtonPressed: () {
+  // Handle button press here
+  print("Button Pressed");
+
+  // Navigate to the contact page using GoRouter
+  context.go('/contact');
+},
+
               ),
              // const SizedBox(height: 16),
                const TextHeaderMobile(
@@ -96,8 +101,13 @@ class MobileRemitancePage extends StatelessWidget {
                     "No additional charges just unlimited transactions",
                 buttonText: "Join the waiting list",
                 onButtonPressed: () {
-                  print("Button pressed!");
-                },
+  // Handle button press here
+  print("Button Pressed");
+
+  // Navigate to the contact page using GoRouter
+  context.go('/contact');
+},
+
               ),
               const SizedBox(height: 16),
               CustomFooter(),

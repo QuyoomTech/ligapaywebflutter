@@ -1,9 +1,12 @@
-// ignore_for_file: use_key_in_widget_constructors
 import 'package:flutter/material.dart';
-import 'package:ligapay/widgets/custom_footer.dart';
-import 'package:ligapay/widgets/footer_desktop_card.dart';
-import 'package:ligapay/widgets/hero_desktop.dart';
 
+import 'package:ligapay/widgets/contact%20_hero_desktop.dart';
+
+import 'package:ligapay/widgets/custom_footer.dart';
+
+
+
+// ignore: use_key_in_widget_constructors
 class DesktopContactPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -13,34 +16,18 @@ class DesktopContactPage extends StatelessWidget {
         style: const TextStyle(fontFamily: 'Utendo'),
         child: SingleChildScrollView(
           child: Column(
-           mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+             mainAxisAlignment: MainAxisAlignment.center,
+    crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
-
-              HeroDesktop(
-          backgroundImageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img1.png",
-          title: "Welcome to LigaPay",
-          subtitle: "Your All-in-One Financial Solution\nDon’t miss out—secure your spot now!",
-          buttonText: "Join the waiting list",
-          onButtonPressed: () {
-            // Handle button press here
-            print("Button Pressed");
-          },
+ const HeroContactDesktop(
+          backgroundImageUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          title: "Tomorrow can't wait. Get in touch today",
+          subtitle: "Go borderless with LigaPay. Join Now",
+         
         ),
-              
-              
-              
-              const SizedBox(height: 50),
-             FooterDesktopCard(
-  backgroundImage: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img1.png',
-  title: 'LigaPay Business Account',
-  subtitle: 'The smart choice for businesses that demand speed, security, and scalability.',
-  buttonText: 'Join the waiting list',
-  onButtonPressed: () {
-    print('Button Pressed');
-  },
-),
+      
+
               CustomFooter(),
             ],
           ),

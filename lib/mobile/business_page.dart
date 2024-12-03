@@ -1,9 +1,10 @@
 import 'dart:core';
 import 'package:flutter/material.dart';
-import 'package:ligapay/mobile/contact_page.dart';
+import 'package:go_router/go_router.dart';
+
 import 'package:ligapay/widgets/custom_footer.dart';
 import 'package:ligapay/widgets/custom_mobile_card1.dart';
-import 'package:ligapay/widgets/footer_desktop_card.dart';
+
 import 'package:ligapay/widgets/footer_mobile_card.dart';
 import 'package:ligapay/widgets/hero_mobile.dart';
 import 'package:ligapay/widgets/text_header_mobile.dart';
@@ -42,9 +43,13 @@ class MobileBusinessPage extends StatelessWidget {
                     "Streamline your business transactions and \n take control of your finances with a \n smart, flexible payment platform that’s \n built to grow with you.",
                 buttonText: "Join the waiting list",
                 onButtonPressed: () {
-                  // Define what happens when the button is pressed
-                  Navigator.pushNamed(context, '/nextPage');
-                },
+  // Handle button press here
+  print("Button Pressed");
+
+  // Navigate to the contact page using GoRouter
+  context.go('/contact');
+},
+
               ),
               const TextHeaderMobile(
                 text: 'Why LigaPay?',
@@ -98,8 +103,13 @@ class MobileBusinessPage extends StatelessWidget {
                     "No additional charges just unlimited transactions",
                 buttonText: "Join the waiting list",
                 onButtonPressed: () {
-                  print("Button pressed!");
-                },
+  // Handle button press here
+  print("Button Pressed");
+
+  // Navigate to the contact page using GoRouter
+  context.go('/contact');
+},
+
               ),
               const SizedBox(height: 16),
               CustomFooter(),

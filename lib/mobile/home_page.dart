@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:ligapay/widgets/custom_footer.dart';
 import 'package:ligapay/widgets/custom_mobile_card1.dart';
 import 'package:ligapay/widgets/custom_mobile_card3.dart';
@@ -35,9 +36,13 @@ class MobileHomePage extends StatelessWidget {
                     'Your All-in-One Financial Solution \n Don’t miss out—secure your spot now!',
                 buttonText: 'Join the waiting list',
                 onButtonPressed: () {
-                  // Define what happens when the button is pressed
-                  Navigator.pushNamed(context, '/nextPage');
-                },
+  // Handle button press here
+  print("Button Pressed");
+
+  // Navigate to the contact page using GoRouter
+  context.go('/contact');
+},
+
               ),
               
               const CustomMobileCard1(
@@ -213,8 +218,13 @@ const ExpandableWidgetMobile(
                     "Ready to experience a new level of \n financial freedom? Join our waiting list  \n today and be among the first to enjoy the  \n benefits of LigaPay. Don’t miss  \n out—secure your spot now!",
                 buttonText: "Join the waiting list",
                 onButtonPressed: () {
-                  print("Button pressed!");
-                },
+  // Handle button press here
+  print("Button Pressed");
+
+  // Navigate to the contact page using GoRouter
+  context.go('/contact');
+},
+
               ),
               const SizedBox(height: 16),
               CustomFooter(),

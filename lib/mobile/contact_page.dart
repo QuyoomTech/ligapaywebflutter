@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:ligapay/widgets/contact%20_hero_mobile.dart';
 import 'package:ligapay/widgets/custom_footer.dart';
+import 'package:ligapay/widgets/custom_mobile_card1.dart';
+
+import 'package:ligapay/widgets/footer_mobile_card.dart';
+import 'package:ligapay/widgets/form.dart';
 import 'package:ligapay/widgets/hero_mobile.dart';
+import 'package:ligapay/widgets/text_header_mobile.dart';
 
 // ignore: use_key_in_widget_constructors
 class MobileContactPage extends StatelessWidget {
-@override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffF2F3FF),
@@ -12,23 +18,17 @@ class MobileContactPage extends StatelessWidget {
         style: const TextStyle(fontFamily: 'Utendo'),
         child: SingleChildScrollView(
           child: Column(
-             mainAxisAlignment: MainAxisAlignment.center,
-    crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
-               HeroMobile(
-    backgroundImageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img1.png',
-        title: 'Welcome to Ligapay',
-        subtitle: 'Your All-in-One Financial Solution \n Don’t miss out—secure your spot now!',
-        buttonText: 'Join the waiting list',
-        onButtonPressed: () {
-          // Define what happens when the button is pressed
-          Navigator.pushNamed(context, '/nextPage');
-        },
-      ),
-  
-    
-    CustomFooter(),
+             const HeroContactMobile(
+          backgroundImageUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          title: "Tomorrow can't wait. Get in touch today",
+          subtitle: "Go borderless with LigaPay. Join Now",
+         
+        ),
+              CustomFooter(),
             ],
           ),
         ),

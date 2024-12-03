@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ligapay/desktop/contact_page.dart';
+import 'package:go_router/go_router.dart';
 import 'package:ligapay/widgets/custom_desktop_card3.dart';
 import 'package:ligapay/widgets/custom_footer.dart';
 import 'package:ligapay/widgets/hero_desktop.dart';
@@ -25,19 +25,26 @@ class DesktopCareersPage extends StatelessWidget {
           title: "Join us  as we improve \n financial wellness for millions",
           subtitle: "We are an innovative fintech company .\n  Here, you can break free of bureaucracy, discover your spark, \n and bring creative ideas to life",
           buttonText: "Join the waiting list",
-          onButtonPressed: () {
-            // Handle button press here
-            print("Button Pressed");
-          },
+           onButtonPressed: () {
+  // Handle button press here
+  print("Button Pressed");
+
+  // Navigate to the contact page using GoRouter
+  context.go('/contact');
+},
         ),
               CustomDesktopCard3(
   title: 'Ready to join today?',
   description: 'Ligapay is a community of amazing people who change the face of the fintech world of tomorrow. Apply now!',
   buttonText: 'Apply now',
   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lc2.png',
-  onButtonPressed: () {
-    print('Apply button clicked!');
-  },
+   onButtonPressed: () {
+  // Handle button press here
+  print("Button Pressed");
+
+  // Navigate to the contact page using GoRouter
+  context.go('/contact');
+},
 ),
               CustomFooter(),
             ],
