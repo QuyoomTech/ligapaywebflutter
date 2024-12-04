@@ -229,13 +229,7 @@ class CustomFooter extends StatelessWidget {
           ),
         ),
         SizedBox(height: 10),
-        Text(
-          'Contact us',
-          style: TextStyle(
-            color: Color(0xFF888888),
-            fontSize: 20,
-          ),
-        ),
+        
         SizedBox(height: 10),
         Text(
           'License',

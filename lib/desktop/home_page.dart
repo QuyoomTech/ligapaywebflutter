@@ -116,9 +116,13 @@ CustomDesktopCard3(
   description: 'Accept payments with a unique link or QR code, tailored for each transaction.',
   buttonText: 'Apply now',
   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img5.png',
-  onButtonPressed: () {
-    print('Collect now');
-  },
+   onButtonPressed: () {
+  // Handle button press here
+  print("Button Pressed");
+
+  // Navigate to the contact page using GoRouter
+  context.go('/contact');
+},
 ),
 Container(
   width: 1500,
@@ -159,8 +163,12 @@ CustomDesktopCard3(
   buttonText: 'Claim offer now',
   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img8.png',
   onButtonPressed: () {
-    print('Claim offer now');
-  },
+  // Handle button press here
+  print("Button Pressed");
+
+  // Navigate to the contact page using GoRouter
+  context.go('/contact');
+},
 ),
  Container(
   width: 1500,
@@ -307,8 +315,12 @@ const CustomExpandableWidget(
                     'The smart choice for businesses that demand speed, security, and scalability.',
                 buttonText: 'Join the waiting list',
                 onButtonPressed: () {
-                  print('Button Pressed');
-                },
+  // Handle button press here
+  print("Button Pressed");
+
+  // Navigate to the contact page using GoRouter
+  context.go('/contact');
+},
               ),
               CustomFooter(),
             ],

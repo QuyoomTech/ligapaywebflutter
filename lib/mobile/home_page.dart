@@ -45,7 +45,7 @@ class MobileHomePage extends StatelessWidget {
 
               ),
                const SizedBox(height: 16),
-              CustomFooter(),
+              
               const CustomMobileCard1(
                 title: 'Seamless Payments, Anytime, Anywhere.',
                 description:
@@ -87,8 +87,12 @@ class MobileHomePage extends StatelessWidget {
   buttonText: 'Collect now',
   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img5.png',
   onButtonPressed: () {
-    print('Apply button clicked!');
-  },
+  // Handle button press here
+  print("Button Pressed");
+
+  // Navigate to the contact page using GoRouter
+  context.go('/contact');
+},
 ),
               const CustomStackMobile(
                 customStackHeight: 324,
@@ -113,9 +117,13 @@ class MobileHomePage extends StatelessWidget {
   description: 'Enjoy a minimal transaction fee of just 0.5%, with your transactions for the first 3 months free.',
   buttonText: 'Claim offer now',
   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img8.png',
-  onButtonPressed: () {
-    print('Apply button clicked!');
-  },
+   onButtonPressed: () {
+  // Handle button press here
+  print("Button Pressed");
+
+  // Navigate to the contact page using GoRouter
+  context.go('/contact');
+},
 ),
               const CustomStackMobile(
                 customStackHeight: 400,
@@ -236,3 +244,4 @@ const ExpandableWidgetMobile(
     );
   }
 }
+

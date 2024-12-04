@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ligapay/network_handling/form_controller.dart';
 import 'package:ligapay/widgets/form.dart';
 import 'package:ligapay/widgets/mobile_nav_header.dart';
-import 'package:ligapay/widgets/responsive_header.dart';
+
 
 class HeroContactMobile extends StatelessWidget {
   final String backgroundImageUrl;

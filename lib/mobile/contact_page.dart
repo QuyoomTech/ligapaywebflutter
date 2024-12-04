@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ligapay/widgets/contact%20_hero_mobile.dart';
 import 'package:ligapay/widgets/custom_footer.dart';
-import 'package:ligapay/widgets/custom_mobile_card1.dart';
 
-import 'package:ligapay/widgets/footer_mobile_card.dart';
-import 'package:ligapay/widgets/form.dart';
-import 'package:ligapay/widgets/hero_mobile.dart';
-import 'package:ligapay/widgets/text_header_mobile.dart';
 
 // ignore: use_key_in_widget_constructors
 class MobileContactPage extends StatelessWidget {
