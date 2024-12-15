@@ -18,7 +18,7 @@ class MobileContactPage extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             children: [
              const HeroContactMobile(
-          backgroundImageUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          backgroundImageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb7.png",
           title: "Tomorrow can't wait. Get in touch today",
           subtitle: "Go borderless with LigaPay. Join Now",
          
