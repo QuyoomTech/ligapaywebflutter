@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+
 import 'package:ligapay/widgets/waitinglist_ui_desktop.dart';
 
 class Jobslist extends StatelessWidget {

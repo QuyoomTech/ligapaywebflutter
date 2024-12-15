@@ -12,6 +12,8 @@ void _launchUrl(String url) async {
   }
 }
 class CustomFooter extends StatelessWidget {
+  get context => null;
+
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -202,40 +204,37 @@ class CustomFooter extends StatelessWidget {
   }
 
   Widget _buildColumn3() {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           'Useful Links',
           style: TextStyle(
             color: Colors.white,
             fontSize: 36,
           ),
         ),
-        SizedBox(height: 30),
-        Text(
-          'Pricing',
-          style: TextStyle(
-            color: Color(0xFF888888),
-            fontSize: 20,
+        const SizedBox(height: 30),
+        InkWell(
+          onTap: () => context.go('/comingsoon'), // Navigate to About Us page
+          child: const Text(
+            'Pricing',
+            style: TextStyle(
+              color: Color(0xFF888888),
+              fontSize: 20,
+            ),
           ),
         ),
-        SizedBox(height: 10),
-        Text(
-          'Blog',
-          style: TextStyle(
-            color: Color(0xFF888888),
-            fontSize: 20,
-          ),
-        ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         
-        SizedBox(height: 10),
-        Text(
-          'License',
-          style: TextStyle(
-            color: Color(0xFF888888),
-            fontSize: 20,
+        InkWell(
+          onTap: () => context.go('/comingsoon'), // Navigate to About Us page
+          child: const Text(
+            'Blog',
+            style: TextStyle(
+              color: Color(0xFF888888),
+              fontSize: 20,
+            ),
           ),
         ),
       ],

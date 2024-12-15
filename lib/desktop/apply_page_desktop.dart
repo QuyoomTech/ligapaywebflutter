@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+
 import 'package:ligapay/widgets/coming_soon_desktop.dart';
 
 class ApplyDesktopPage extends StatelessWidget {
@@ -9,9 +9,9 @@ class ApplyDesktopPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
      
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
        // padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

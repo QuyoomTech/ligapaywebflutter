@@ -1,6 +1,18 @@
+
 // import 'package:flutter/material.dart';
 // import 'package:go_router/go_router.dart';
+// import 'package:ligapay/desktop/about.dart';
+// import 'package:ligapay/desktop/apply_page_desktop.dart';
+
+
+// import 'package:ligapay/desktop/privacy_policy.dart';
+// import 'package:ligapay/desktop/terms%20_and_condtions.dart';
+// import 'package:ligapay/desktop/waiting_list.dart';
+// import 'package:ligapay/mobile/apply_page_mobile.dart';
+// import 'package:ligapay/mobile/waitlist_list_mobile.dart';
+
 // import 'desktop/home_page.dart' as DesktopHomePage;
+// import 'desktop/coming_soon.dart' as ComingSoonPage;
 // import 'desktop/personal_page.dart' as DesktopPersonalPage;
 // import 'desktop/business_page.dart' as DesktopBusinessPage;
 // import 'desktop/remittance_page.dart' as DesktopRemittancePage;
@@ -72,26 +84,52 @@
 //         path: '/about',
 //         builder: (context, state) => _responsivePage(
 //           context,
-//           desktopPage: DesktopContactPage.DesktopContactPage(),
-//           mobilePage: MobileContactPage.MobileContactPage(),
+//           desktopPage: AboutUsPage(),
+//           mobilePage:AboutUsPage(),
 //         ),
 //       ),
 //       GoRoute(
 //         path: '/privacy',
 //         builder: (context, state) => _responsivePage(
 //           context,
-//           desktopPage: DesktopContactPage.DesktopContactPage(),
-//           mobilePage: MobileContactPage.MobileContactPage(),
+//           desktopPage: PrivacyPolicyPage(),
+//           mobilePage: PrivacyPolicyPage(),
 //         ),
 //       ),
 //       GoRoute(
 //         path: '/terms',
 //         builder: (context, state) => _responsivePage(
 //           context,
-//           desktopPage: DesktopContactPage.DesktopContactPage(),
-//           mobilePage: MobileContactPage.MobileContactPage(),
+//           desktopPage: const TermsAndConditionsPage(),
+//           // ignore: prefer_const_constructors
+//           mobilePage: TermsAndConditionsPage(),
 //         ),
 //       ),
+//       GoRoute(
+//         path: '/comingsoon',
+//         builder: (context, state) => _responsivePage(
+//           context,
+//           desktopPage:   ComingSoonPage.ComingSoonPage(),
+//           mobilePage:  ComingSoonPage.ComingSoonPage(),
+//         ),
+//       ),
+//       GoRoute(
+//         path: '/apply',
+//         builder: (context, state) => _responsivePage(
+//           context,
+//           desktopPage: ApplyDesktopPage(),
+//           mobilePage: ApplyMobilePage(),
+//         ),
+//       ),
+//       GoRoute(
+//         path: '/waitinglist',
+//         builder: (context, state) => _responsivePage(
+//           context,
+//           desktopPage: WaitinglistPage(),
+//           mobilePage:  WaitinglistPageMobile(),
+//         ),
+//       ),
+      
 //     ],
 //   );
 
@@ -119,8 +157,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ligapay/desktop/about.dart';
 import 'package:ligapay/desktop/apply_page_desktop.dart';
-
-
 import 'package:ligapay/desktop/privacy_policy.dart';
 import 'package:ligapay/desktop/terms%20_and_condtions.dart';
 import 'package:ligapay/desktop/waiting_list.dart';
@@ -150,99 +186,122 @@ class LigaPay extends StatelessWidget {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => _responsivePage(
-          context,
-          desktopPage: const DesktopHomePage.DesktopHomePage(),
-          mobilePage: const MobileHomePage.MobileHomePage(),
+        pageBuilder: (context, state) => NoTransitionPage(
+          child: _responsivePage(
+            context,
+            desktopPage: const DesktopHomePage.DesktopHomePage(),
+            mobilePage: const MobileHomePage.MobileHomePage(),
+          ),
         ),
       ),
       GoRoute(
         path: '/personal',
-        builder: (context, state) => _responsivePage(
-          context,
-          desktopPage: DesktopPersonalPage.DesktopPersonalPage(),
-          mobilePage: MobilePersonalPage.MobilePersonalPage(),
+        pageBuilder: (context, state) => NoTransitionPage(
+          child: _responsivePage(
+            context,
+            desktopPage: DesktopPersonalPage.DesktopPersonalPage(),
+            mobilePage: MobilePersonalPage.MobilePersonalPage(),
+          ),
         ),
       ),
       GoRoute(
         path: '/business',
-        builder: (context, state) => _responsivePage(
-          context,
-          desktopPage: DesktopBusinessPage.DesktopBusinessPage(),
-          mobilePage: const MobileBusinessPage.MobileBusinessPage(),
+        pageBuilder: (context, state) => NoTransitionPage(
+          child: _responsivePage(
+            context,
+            desktopPage: DesktopBusinessPage.DesktopBusinessPage(),
+            mobilePage: const MobileBusinessPage.MobileBusinessPage(),
+          ),
         ),
       ),
       GoRoute(
         path: '/remittance',
-        builder: (context, state) => _responsivePage(
-          context,
-          desktopPage: DesktopRemittancePage.DesktopRemitancePage(),
-          mobilePage: const MobileRemittancePage.MobileRemitancePage(),
+        pageBuilder: (context, state) => NoTransitionPage(
+          child: _responsivePage(
+            context,
+            desktopPage: DesktopRemittancePage.DesktopRemitancePage(),
+            mobilePage: const MobileRemittancePage.MobileRemitancePage(),
+          ),
         ),
       ),
       GoRoute(
         path: '/careers',
-        builder: (context, state) => _responsivePage(
-          context,
-          desktopPage: DesktopCareersPage.DesktopCareersPage(),
-          mobilePage: MobileCareersPage.MobileCareersPage(),
+        pageBuilder: (context, state) => NoTransitionPage(
+          child: _responsivePage(
+            context,
+            desktopPage: DesktopCareersPage.DesktopCareersPage(),
+            mobilePage: MobileCareersPage.MobileCareersPage(),
+          ),
         ),
       ),
       GoRoute(
         path: '/contact',
-        builder: (context, state) => _responsivePage(
-          context,
-          desktopPage: DesktopContactPage.DesktopContactPage(),
-          mobilePage: MobileContactPage.MobileContactPage(),
+        pageBuilder: (context, state) => NoTransitionPage(
+          child: _responsivePage(
+            context,
+            desktopPage: DesktopContactPage.DesktopContactPage(),
+            mobilePage: MobileContactPage.MobileContactPage(),
+          ),
         ),
       ),
       GoRoute(
         path: '/about',
-        builder: (context, state) => _responsivePage(
-          context,
-          desktopPage: AboutUsPage(),
-          mobilePage:AboutUsPage(),
+        pageBuilder: (context, state) => NoTransitionPage(
+          child: _responsivePage(
+            context,
+            desktopPage: AboutUsPage(),
+            mobilePage: AboutUsPage(),
+          ),
         ),
       ),
       GoRoute(
         path: '/privacy',
-        builder: (context, state) => _responsivePage(
-          context,
-          desktopPage: PrivacyPolicyPage(),
-          mobilePage: PrivacyPolicyPage(),
+        pageBuilder: (context, state) => NoTransitionPage(
+          child: _responsivePage(
+            context,
+            desktopPage: PrivacyPolicyPage(),
+            mobilePage: PrivacyPolicyPage(),
+          ),
         ),
       ),
       GoRoute(
         path: '/terms',
-        builder: (context, state) => _responsivePage(
-          context,
-          desktopPage: const TermsAndConditionsPage(),
-          // ignore: prefer_const_constructors
-          mobilePage: TermsAndConditionsPage(),
+        pageBuilder: (context, state) => NoTransitionPage(
+          child: _responsivePage(
+            context,
+            desktopPage: const TermsAndConditionsPage(),
+            mobilePage: const TermsAndConditionsPage(),
+          ),
         ),
       ),
       GoRoute(
         path: '/comingsoon',
-        builder: (context, state) => _responsivePage(
-          context,
-          desktopPage:   ComingSoonPage.ComingSoonPage(),
-          mobilePage:  ComingSoonPage.ComingSoonPage(),
+        pageBuilder: (context, state) => NoTransitionPage(
+          child: _responsivePage(
+            context,
+            desktopPage: ComingSoonPage.ComingSoonPage(),
+            mobilePage: ComingSoonPage.ComingSoonPage(),
+          ),
         ),
       ),
       GoRoute(
         path: '/apply',
-        builder: (context, state) => _responsivePage(
-          context,
-          desktopPage: ApplyDesktopPage(),
-          mobilePage: ApplyMobilePage(),
+        pageBuilder: (context, state) => NoTransitionPage(
+          child: _responsivePage(
+            context,
+            desktopPage: ApplyDesktopPage(),
+            mobilePage: ApplyMobilePage(),
+          ),
         ),
       ),
       GoRoute(
         path: '/waitinglist',
-        builder: (context, state) => _responsivePage(
-          context,
-          desktopPage: WaitinglistPage(),
-          mobilePage:  WaitinglistPageMobile(),
+        pageBuilder: (context, state) => NoTransitionPage(
+          child: _responsivePage(
+            context,
+            desktopPage: WaitinglistPage(),
+            mobilePage: WaitinglistPageMobile(),
+          ),
         ),
       ),
     ],
