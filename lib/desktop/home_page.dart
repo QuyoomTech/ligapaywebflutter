@@ -57,7 +57,7 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
   print("Button Pressed");
 
   // Navigate to the contact page using GoRouter
-  context.go('/contact');
+  context.go('/waitinglist');
 },
 
 
@@ -114,14 +114,14 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
 CustomDesktopCard3(
   title: 'Seamless Payment Collection',
   description: 'Accept payments with a unique link or QR code, tailored for each transaction.',
-  buttonText: 'Apply now',
+  buttonText: 'Collect Now',
   imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img5.png',
    onButtonPressed: () {
   // Handle button press here
   print("Button Pressed");
 
   // Navigate to the contact page using GoRouter
-  context.go('/contact');
+  context.go('/comingsoon');
 },
 ),
 Container(
@@ -167,7 +167,7 @@ CustomDesktopCard3(
   print("Button Pressed");
 
   // Navigate to the contact page using GoRouter
-  context.go('/contact');
+  context.go('/comingsoon');
 },
 ),
  Container(
@@ -188,7 +188,7 @@ CustomDesktopCard3(
             description:
                 "No matter where you are, LigaPay is available for anyone, anywhere.",
           ),
-           const SizedBox(
+           SizedBox(
                          
                           width: 50,
                         ),
@@ -316,10 +316,9 @@ const CustomExpandableWidget(
                 buttonText: 'Join the waiting list',
                 onButtonPressed: () {
   // Handle button press here
-  print("Button Pressed");
 
   // Navigate to the contact page using GoRouter
-  context.go('/contact');
+  context.go('/waitinglist');
 },
               ),
               CustomFooter(),

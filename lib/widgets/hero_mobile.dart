@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ligapay/widgets/form.dart';
 import 'package:ligapay/widgets/mobile_nav_header.dart';
 
 class HeroMobile extends StatelessWidget {

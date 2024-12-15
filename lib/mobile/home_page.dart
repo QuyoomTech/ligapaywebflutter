@@ -40,7 +40,7 @@ class MobileHomePage extends StatelessWidget {
   print("Button Pressed");
 
   // Navigate to the contact page using GoRouter
-  context.go('/contact');
+  context.go('/waitinglist');
 },
 
               ),
@@ -91,7 +91,7 @@ class MobileHomePage extends StatelessWidget {
   print("Button Pressed");
 
   // Navigate to the contact page using GoRouter
-  context.go('/contact');
+  context.go('/comingsoon');
 },
 ),
               const CustomStackMobile(
@@ -122,7 +122,7 @@ class MobileHomePage extends StatelessWidget {
   print("Button Pressed");
 
   // Navigate to the contact page using GoRouter
-  context.go('/contact');
+  context.go('/comingsoon');
 },
 ),
               const CustomStackMobile(
@@ -231,7 +231,7 @@ const ExpandableWidgetMobile(
   print("Button Pressed");
 
   // Navigate to the contact page using GoRouter
-  context.go('/contact');
+  context.go('/waitinglist');
 },
 
               ),

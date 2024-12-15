@@ -35,7 +35,7 @@ class MobileRemitancePage extends StatelessWidget {
   print("Button Pressed");
 
   // Navigate to the contact page using GoRouter
-  context.go('/contact');
+  context.go('/waitinglist');
 },
 
               ),
@@ -102,10 +102,9 @@ class MobileRemitancePage extends StatelessWidget {
                 buttonText: "Join the waiting list",
                 onButtonPressed: () {
   // Handle button press here
-  print("Button Pressed");
 
   // Navigate to the contact page using GoRouter
-  context.go('/contact');
+  context.go('/waitinglist');
 },
 
               ),

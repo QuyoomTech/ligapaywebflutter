@@ -46,8 +46,8 @@ const CustomDesktopCard1(
   description: 'Send money to anyone using their email, phone number, or username—choose whichever method suits you best.',
    imageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lp2.png',
   descriptionMaxLines: 6, 
-  imageHeight: 324, // Custom height for the image
-  imageWidth: 324, // Show up to 6 lines, adjust as needed
+  imageHeight: 520, // Custom height for the image
+  imageWidth: 675, // Show up to 6 lines, adjust as needed
 ),
  const CustomDesktopCard2(
                

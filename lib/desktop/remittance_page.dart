@@ -35,7 +35,7 @@ class DesktopRemitancePage extends StatelessWidget {
                   print("Button Pressed");
 
                   // Navigate to the contact page using GoRouter
-                  context.go('/contact');
+                  context.go('/waitinglist');
                 },
               ),
               const TextHeaderDesktop(
@@ -104,7 +104,7 @@ class DesktopRemitancePage extends StatelessWidget {
                   print("Button Pressed");
 
                   // Navigate to the contact page using GoRouter
-                  context.go('/contact');
+                  context.go('/waitinglist');
                 },
               ),
               CustomFooter(),

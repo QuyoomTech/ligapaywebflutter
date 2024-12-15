@@ -118,9 +118,17 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ligapay/desktop/about.dart';
+import 'package:ligapay/desktop/apply_page_desktop.dart';
+
+
 import 'package:ligapay/desktop/privacy_policy.dart';
+import 'package:ligapay/desktop/terms%20_and_condtions.dart';
+import 'package:ligapay/desktop/waiting_list.dart';
+import 'package:ligapay/mobile/apply_page_mobile.dart';
+import 'package:ligapay/mobile/waitlist_list_mobile.dart';
 
 import 'desktop/home_page.dart' as DesktopHomePage;
+import 'desktop/coming_soon.dart' as ComingSoonPage;
 import 'desktop/personal_page.dart' as DesktopPersonalPage;
 import 'desktop/business_page.dart' as DesktopBusinessPage;
 import 'desktop/remittance_page.dart' as DesktopRemittancePage;
@@ -208,8 +216,33 @@ class LigaPay extends StatelessWidget {
         path: '/terms',
         builder: (context, state) => _responsivePage(
           context,
-          desktopPage: PrivacyPolicyPage(),
-          mobilePage: PrivacyPolicyPage(),
+          desktopPage: const TermsAndConditionsPage(),
+          // ignore: prefer_const_constructors
+          mobilePage: TermsAndConditionsPage(),
+        ),
+      ),
+      GoRoute(
+        path: '/comingsoon',
+        builder: (context, state) => _responsivePage(
+          context,
+          desktopPage:   ComingSoonPage.ComingSoonPage(),
+          mobilePage:  ComingSoonPage.ComingSoonPage(),
+        ),
+      ),
+      GoRoute(
+        path: '/apply',
+        builder: (context, state) => _responsivePage(
+          context,
+          desktopPage: ApplyDesktopPage(),
+          mobilePage: ApplyMobilePage(),
+        ),
+      ),
+      GoRoute(
+        path: '/waitinglist',
+        builder: (context, state) => _responsivePage(
+          context,
+          desktopPage: WaitinglistPage(),
+          mobilePage:  WaitinglistPageMobile(),
         ),
       ),
     ],

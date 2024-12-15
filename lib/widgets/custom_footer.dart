@@ -64,9 +64,9 @@ class CustomFooter extends StatelessWidget {
           height: 61,
           padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
           decoration: const BoxDecoration(color: Colors.black),
-          child: Row(
+          child: const Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               Text(
                 '© LigaPay 2024',
                 textAlign: TextAlign.center,

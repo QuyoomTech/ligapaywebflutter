@@ -1,16 +1,16 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // Required for input formatters
-import 'package:ligapay/model/form_model.dart';
+import 'package:ligapay/model/form_model2.dart';
 
 
-class CustomForm extends StatefulWidget {
-  final Future<void> Function(FormModel formModel)? onSubmit;
+class CustomForm2 extends StatefulWidget {
+  final Future<void> Function(FormModel2 formModel2)? onSubmit;
   final String submitButtonText;
   final Color buttonColor;
   final Color buttonTextColor;
 
-  const CustomForm({
+  const CustomForm2({
     Key? key,
     required this.onSubmit,
     this.submitButtonText = "Submit Details",
@@ -19,17 +19,14 @@ class CustomForm extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _CustomFormState createState() => _CustomFormState();
+  _CustomForm2State createState() => _CustomForm2State();
 }
 
-class _CustomFormState extends State<CustomForm> {
+class _CustomForm2State extends State<CustomForm2> {
   final _formKey = GlobalKey<FormState>();
   TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
-  TextEditingController phoneController = TextEditingController();
-  TextEditingController subjectController = TextEditingController();
-  TextEditingController messageController = TextEditingController();
-
+  
   bool isSubmitting = false;
 
   Future<void> _submitForm() async {
@@ -38,16 +35,14 @@ class _CustomFormState extends State<CustomForm> {
         isSubmitting = true;
       });
 
-      FormModel formModel = FormModel(
+      FormModel2 formModel2 = FormModel2(
         nameController.text.trim(),
         emailController.text.trim(),
-        phoneController.text.trim(),
-        subjectController.text.trim(),
-        messageController.text.trim(),
+        
       );
 
       if (widget.onSubmit != null) {
-        await widget.onSubmit!(formModel);
+        await widget.onSubmit!(formModel2);
       }
 
       setState(() {
@@ -60,9 +55,7 @@ class _CustomFormState extends State<CustomForm> {
   void _clearFields() {
     nameController.clear();
     emailController.clear();
-    phoneController.clear();
-    subjectController.clear();
-    messageController.clear();
+  
   }
 
   @override
@@ -94,38 +87,8 @@ class _CustomFormState extends State<CustomForm> {
               return null;
             },
           ),
-          _buildTextField(
-            controller: phoneController,
-            hintText: "Enter your Phone Number",
-            keyboardType: TextInputType.phone,
-            inputFormatters: [
-              FilteringTextInputFormatter.digitsOnly, // Only numbers
-              LengthLimitingTextInputFormatter(10),  // Max length 10 digits
-            ],
-            validator: (value) {
-              if (value!.trim().isEmpty) {
-                return "Phone number is required";
-              }
-              if (value.trim().length != 10) {
-                return "Enter a valid 10-digit phone number";
-              }
-              return null;
-            },
-          ),
-          _buildTextField(
-            controller: subjectController,
-            hintText: "Enter the Subject",
-            validator: (value) =>
-                value!.trim().isEmpty ? "Subject is required" : null,
-          ),
-          _buildTextField(
-            controller: messageController,
-            hintText: "Enter your Message",
-            validator: (value) =>
-                value!.trim().isEmpty ? "Message is required" : null,
-            maxLines: 16,
-            minLines: 6,
-          ),
+         
+         
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 12),
             child: ElevatedButton(
