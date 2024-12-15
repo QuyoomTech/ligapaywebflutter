@@ -31,7 +31,7 @@ class ApplyMobilePage extends StatelessWidget {
            ComingSoonDesktop(
         backgroundImageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb1.png', // Replace with your image URL
         title: 'Joint the LigaPay team', // Replace with your desired title
-        subtitle: 'Send your resume on \n apply@ligapay.com', // Replace with your subtitle
+        subtitle: 'Send your resume on \n hr@LigaPay.com and career@LigaPay.com  ', // Replace with your subtitle
       ),
           ],
         ),
