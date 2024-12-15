@@ -35,7 +35,7 @@ class ComingSoonDesktop extends StatelessWidget {
           child: Container(
             width: double.infinity,
             height: 842,
-            padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+           // padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 0),
             decoration: const BoxDecoration(
                 // color: Colors.black.withOpacity(0.3),
                 ),
@@ -45,7 +45,7 @@ class ComingSoonDesktop extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
               
-                const SizedBox(height: 200),
+                const SizedBox(height: 300),
                 //
                 Flexible(
                   child: SizedBox(

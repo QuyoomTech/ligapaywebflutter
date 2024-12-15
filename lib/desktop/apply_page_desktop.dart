@@ -10,28 +10,16 @@ class ApplyDesktopPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            // Handle button press here
-            print("Button Pressed");
-
-            // Navigate to the contact page using GoRouter
-            context.go('/');
-          },
-        ),
-        title: const Text(''),
-      ),
+     
       body: const SingleChildScrollView(
        // padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
            ComingSoonDesktop(
-        backgroundImageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/img1.png', // Replace with your image URL
-        title: 'Coming Soon', // Replace with your desired title
-        subtitle: 'Stay tuned for something amazing!', // Replace with your subtitle
+        backgroundImageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/43983%20(1).jpg', // Replace with your image URL
+        title: 'Joint the LigaPay team', // Replace with your desired title
+        subtitle: 'Send your resume on apply@ligapay.com', // Replace with your subtitle
       ),
           ],
         ),

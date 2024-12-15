@@ -30,7 +30,7 @@ class DesktopCareersPage extends StatelessWidget {
   print("Button Pressed");
 
   // Navigate to the contact page using GoRouter
-  context.go('/contact');
+  context.go('/waitinglist');
 },
         ),
               CustomDesktopCard3(
@@ -43,7 +43,7 @@ class DesktopCareersPage extends StatelessWidget {
   print("Button Pressed");
 
   // Navigate to the contact page using GoRouter
-  context.go('/contact');
+  context.go('/apply');
 },
 ),
               CustomFooter(),
