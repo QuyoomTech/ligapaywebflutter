@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -97,9 +96,43 @@ class ResponsiveHeader extends StatelessWidget {
     );
   }
 
-  // Navigation Menu Item for Desktop
- 
- Widget _buildNavItem(
+  // Navigation Menu Item for Desktop with  background color
+
+//  Widget _buildNavItem(
+//     BuildContext context, String title, String route, String currentRoute) {
+//   bool isActive = currentRoute == route; // Check if the current route matches
+//   return Padding(
+//     padding: const EdgeInsets.symmetric(horizontal: 16.0),
+//     child: TextButton(
+//       onPressed: isActive
+//           ? null
+//           : () {
+//               context.go(route); // GoRouter navigation
+//             },
+//       style: TextButton.styleFrom(
+//         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+//         backgroundColor: isActive
+//             ? Colors.black
+//             : Colors.transparent, // Black background for active route
+//         foregroundColor: Colors.white, // Default text color is white
+//         shape: RoundedRectangleBorder(
+//           borderRadius: BorderRadius.circular(40), // Rounded corners
+//         ),
+//       ),
+//       child: Text(
+//         title,
+//         style: TextStyle(
+//           color: Colors.white, // Always white text
+//           fontSize: 16,
+//           fontFamily: 'Utendo',
+//         ),
+//       ),
+//     ),
+//   );
+// }
+
+// with border active color
+Widget _buildNavItem(
     BuildContext context, String title, String route, String currentRoute) {
   bool isActive = currentRoute == route; // Check if the current route matches
   return Padding(
@@ -111,21 +144,28 @@ class ResponsiveHeader extends StatelessWidget {
               context.go(route); // GoRouter navigation
             },
       style: TextButton.styleFrom(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-        backgroundColor: isActive
-            ? Colors.black
-            : Colors.transparent, // Black background for active route
+        padding: EdgeInsets.zero, // Remove default padding
         foregroundColor: Colors.white, // Default text color is white
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(40), // Rounded corners
+          side: BorderSide(
+            color: isActive ? Colors.white : Colors.transparent, // Active border color
+            width: 1.0, // Border thickness
+          ),
         ),
       ),
-      child: Text(
-        title,
-        style: TextStyle(
-          color: Colors.white, // Always white text
-          fontSize: 16,
-          fontFamily: 'Utendo',
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0), // Set padding inside the container
+        child: Center(  // Ensure the text is centered
+          child: Text(
+            title,
+            style: const TextStyle(
+              color: Colors.white, // Always white text
+              fontSize: 16,
+              fontFamily: 'Utendo',
+              fontWeight: FontWeight.w300,
+            ),
+          ),
         ),
       ),
     ),
