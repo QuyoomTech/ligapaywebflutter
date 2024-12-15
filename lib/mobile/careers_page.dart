@@ -23,10 +23,10 @@ class MobileCareersPage extends StatelessWidget {
        backgroundImageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lc1.png",
           title: "Join us  as we improve \n financial wellness for millions",
           subtitle: "We are an innovative fintech company .\n  Here, you can break free of bureaucracy, discover your spark, \n and bring creative ideas to life",
-          buttonText: "Join the waiting list",
+          buttonText: "Apply Now",
         onButtonPressed: () {
           // Define what happens when the button is pressed
-          Navigator.pushNamed(context, '/nextPage');
+          Navigator.pushNamed(context, '/apply');
         },
       ),
   const SizedBox(height:18),

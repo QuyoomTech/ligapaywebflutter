@@ -22,11 +22,11 @@ class ComingSoonDesktop extends StatelessWidget {
         // Background image
         Container(
           width: double.infinity,
-          height: 842,
+          height: 1400,
           decoration: BoxDecoration(
             image: DecorationImage(
               image: NetworkImage(backgroundImageUrl),
-              fit: BoxFit.fitHeight,
+              fit: BoxFit.fill,
             ),
           ),
         ),

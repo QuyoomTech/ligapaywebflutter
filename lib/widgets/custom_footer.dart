@@ -216,7 +216,7 @@ class CustomFooter extends StatelessWidget {
         ),
         const SizedBox(height: 30),
         InkWell(
-          onTap: () => context.go('/comingsoon'), // Navigate to About Us page
+          onTap: () => context.go('/pricing'), // Navigate to About Us page
           child: const Text(
             'Pricing',
             style: TextStyle(
@@ -259,7 +259,7 @@ class CustomFooter extends StatelessWidget {
         ),
         SizedBox(height: 10),
         Text(
-          '4646 Poplar Ave, STE 445,\nMemphis, TN 38117, USA.',
+          'Change the address to: 101 California Street, San Francisco, CA.',
           style: TextStyle(color: Color(0xFF888888), fontSize: 20),
         ),
         SizedBox(height: 30),

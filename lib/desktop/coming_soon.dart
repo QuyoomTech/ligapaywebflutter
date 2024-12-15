@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:ligapay/widgets/coming_soon_desktop.dart';
 
 class ComingSoonPage extends StatelessWidget {

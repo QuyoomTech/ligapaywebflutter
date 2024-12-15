@@ -157,6 +157,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ligapay/desktop/about.dart';
 import 'package:ligapay/desktop/apply_page_desktop.dart';
+import 'package:ligapay/desktop/pricing_page.dart';
 import 'package:ligapay/desktop/privacy_policy.dart';
 import 'package:ligapay/desktop/terms%20_and_condtions.dart';
 import 'package:ligapay/desktop/waiting_list.dart';
@@ -301,6 +302,16 @@ class LigaPay extends StatelessWidget {
             context,
             desktopPage: WaitinglistPage(),
             mobilePage: WaitinglistPageMobile(),
+          ),
+        ),
+      ),
+      GoRoute(
+        path: '/pricing',
+        pageBuilder: (context, state) => NoTransitionPage(
+          child: _responsivePage(
+            context,
+            desktopPage: PricingPage(),
+            mobilePage: PricingPage(),
           ),
         ),
       ),

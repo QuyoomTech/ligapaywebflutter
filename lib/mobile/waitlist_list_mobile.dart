@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:ligapay/widgets/waitinglist_ui_mobile.dart';
 
 class  WaitinglistPageMobile extends StatelessWidget {
@@ -17,7 +16,7 @@ class  WaitinglistPageMobile extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
            WaitingListUIMobile(
-          backgroundImageUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          backgroundImageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lc1.png",
           title: "Unlock benefits only available to early users",
           subtitle: "Don’t miss out! Join the waiting list today and be part of the revolution.",
          

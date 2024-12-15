@@ -133,3 +133,4 @@ double _getResponsiveFontSize(BuildContext context, double mobileSize,
     return desktopSize;
   }
 }
+
