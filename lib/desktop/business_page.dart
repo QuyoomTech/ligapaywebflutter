@@ -117,9 +117,9 @@ class DesktopBusinessPage extends StatelessWidget {
                 description:
                     'Make it simple for your clients to pay—just send them a link, and they can complete the payment in moments.',
                 imageUrl:
-                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb4.png?width=567&height=594',
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/11112.gif',
                 descriptionMaxLines: 6,
-                imageHeight: 700, // Custom height for the image
+                imageHeight: 675, // Custom height for the image
                 imageWidth: 675, // Show up to 6 lines, adjust as needed
               ),
               const CustomDesktopCard2(

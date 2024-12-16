@@ -69,7 +69,7 @@ class MobileBusinessPage extends StatelessWidget {
                 description:
                     'Make it simple for your clients to pay—just send them a link, and they can complete the payment in moments.',
                 imageUrl:
-                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb4.png?width=567&height=594',
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/11112.gif',
                 descriptionMaxLines: 6,
                 imageHeight: 324, // Custom height for the image
                 imageWidth: 324, // Show up to 6 lines, adjust as needed

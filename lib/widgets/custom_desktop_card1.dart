@@ -41,8 +41,8 @@ class CustomDesktopCard1 extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       decoration: const BoxDecoration(),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center ,
         children: [
           Container(
             width: imageWidth,
@@ -52,7 +52,7 @@ class CustomDesktopCard1 extends StatelessWidget {
             decoration: const BoxDecoration(),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 SizedBox(
                   width: double.infinity,
@@ -90,7 +90,12 @@ class CustomDesktopCard1 extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(width: spacing),
+         Expanded(
+        child: Container(
+          height: 425,
+         // decoration: BoxDecoration(color: Color(0xFFD9D9D9)),
+        ),
+      ),
           Container(
             width: imageWidth,
             height: imageHeight,
