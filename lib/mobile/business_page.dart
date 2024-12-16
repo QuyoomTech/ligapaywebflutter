@@ -26,7 +26,7 @@ class MobileBusinessPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffF2F3FF),
+      backgroundColor: const Color(0xffFFFFFF),
       body: DefaultTextStyle(
         style: const TextStyle(fontFamily: 'Utendo'),
         child: SingleChildScrollView(
