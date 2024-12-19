@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 void _launchUrl(String url) async {
   final Uri uri = Uri.parse(url);
   if (await canLaunchUrl(uri)) {
@@ -40,8 +39,8 @@ class CustomFooter extends StatelessWidget {
                       children: [
                         _buildColumn1(),
                         _buildColumn2(context),
+                       
                         _buildColumn3(),
-                        _buildColumn4(),
                       ],
                     )
                   : Column(
@@ -52,8 +51,7 @@ class CustomFooter extends StatelessWidget {
                         _buildColumn2(context),
                         const SizedBox(height: 40),
                         _buildColumn3(),
-                        const SizedBox(height: 40),
-                        _buildColumn4(),
+                       
                       ],
                     ),
               const SizedBox(height: 50),
@@ -157,9 +155,9 @@ class CustomFooter extends StatelessWidget {
         ),
         const SizedBox(height: 30),
         InkWell(
-          onTap: () => context.go('/'), // Navigate to Home page
+          onTap: () => context.go('/pricing'), // Navigate to Home page
           child: const Text(
-            'Home',
+            'Pricing',
             style: TextStyle(
               color: Color(0xFF888888),
               fontSize: 20,
@@ -199,49 +197,14 @@ class CustomFooter extends StatelessWidget {
             ),
           ),
         ),
+        
       ],
     );
   }
+
+ 
 
   Widget _buildColumn3() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Text(
-          'Useful Links',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 36,
-          ),
-        ),
-        const SizedBox(height: 30),
-        InkWell(
-          onTap: () => context.go('/pricing'), // Navigate to About Us page
-          child: const Text(
-            'Pricing',
-            style: TextStyle(
-              color: Color(0xFF888888),
-              fontSize: 20,
-            ),
-          ),
-        ),
-        const SizedBox(height: 10),
-        
-        InkWell(
-          onTap: () => context.go('/comingsoon'), // Navigate to About Us page
-          child: const Text(
-            'Blog',
-            style: TextStyle(
-              color: Color(0xFF888888),
-              fontSize: 20,
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget _buildColumn4() {
     return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
