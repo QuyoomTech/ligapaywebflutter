@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import 'package:ligapay/widgets/coming_soon_desktop.dart';
 
@@ -9,9 +10,21 @@ class ApplyDesktopPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-     
-      body: SingleChildScrollView(
+    return Scaffold(
+     appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            // Handle button press here
+            print("Button Pressed");
+
+            // Navigate to the contact page using GoRouter
+            context.go('/');
+          },
+        ),
+        title: const Text('Apply Now'),
+      ),
+      body: const SingleChildScrollView(
        // padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

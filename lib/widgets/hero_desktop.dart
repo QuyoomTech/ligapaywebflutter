@@ -83,32 +83,35 @@ class HeroDesktop extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 50),
-                GestureDetector(
-                  onTap: onButtonPressed,
-                  child: Container(
-                    width: 284,
-                    height: 60,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 30, vertical: 16),
-                    decoration: ShapeDecoration(
-                      color: Colors.black,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                    ),
-                    child: Center(
-                      child: Text(
-                        buttonText,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontFamily: 'Utendo',
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                MouseRegion(
+  cursor: SystemMouseCursors.click, // Changes cursor to hand on hover
+  child: GestureDetector(
+    onTap: onButtonPressed,
+    child: Container(
+      width: 284,
+      height: 60,
+      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 16),
+      decoration: ShapeDecoration(
+        color: Colors.black,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+      ),
+      child: Center(
+        child: Text(
+          buttonText,
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+            fontFamily: 'Utendo',
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ),
+    ),
+  ),
+),
+
               ],
             ),
           ),
