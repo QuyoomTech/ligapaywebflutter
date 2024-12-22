@@ -40,12 +40,12 @@ class DesktopBusinessPage extends StatelessWidget {
               const TextHeaderDesktop(
                 text: 'Why Business Account',
               ),
-              const CustomDesktopCard1(
-                title: 'Fast Withdrawals',
+             const CustomDesktopCard1(
+                title: 'Share Payment Links Instantly',
                 description:
-                    'Access your funds quickly and efficiently, ensuring you have the cash flow needed to run your business smoothly.',
+                    'Make it simple for your clients to pay—just send them a link, and they can complete the payment in moments.',
                 imageUrl:
-                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb2.png',
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/11112.gif',
                 descriptionMaxLines: 6,
                 imageHeight: 675, // Custom height for the image
                 imageWidth: 675, // Show up to 6 lines, adjust as needed
@@ -112,12 +112,13 @@ class DesktopBusinessPage extends StatelessWidget {
                   ),
                 ),
               ),
-              const CustomDesktopCard1(
-                title: 'Share Payment Links Instantly',
+              
+               const CustomDesktopCard1(
+                title: 'Fast Withdrawals',
                 description:
-                    'Make it simple for your clients to pay—just send them a link, and they can complete the payment in moments.',
+                    'Access your funds quickly and efficiently, ensuring you have the cash flow needed to run your business smoothly.',
                 imageUrl:
-                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/11112.gif',
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb2.png',
                 descriptionMaxLines: 6,
                 imageHeight: 675, // Custom height for the image
                 imageWidth: 675, // Show up to 6 lines, adjust as needed

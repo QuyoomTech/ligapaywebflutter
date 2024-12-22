@@ -54,22 +54,105 @@ class MobileBusinessPage extends StatelessWidget {
               const TextHeaderMobile(
                 text: 'Why LigaPay?',
               ),
-              const CustomMobileCard1(
-                title: 'Fast Withdrawals',
-                description:
-                    'Access your funds quickly and efficiently, ensuring you have the cash flow needed to run your business smoothly.',
-                imageUrl:
-                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb2.png',
-                descriptionMaxLines: 6,
-                imageHeight: 324, // Custom height for the image
-                imageWidth: 324, // Show up to 6 lines, adjust as needed
-              ),
+             
               const CustomMobileCard1(
                 title: 'Share Payment Links Instantly',
                 description:
                     'Make it simple for your clients to pay—just send them a link, and they can complete the payment in moments.',
                 imageUrl:
                     'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/11112.gif',
+                descriptionMaxLines: 6,
+                imageHeight: 324, // Custom height for the image
+                imageWidth: 324, // Show up to 6 lines, adjust as needed
+              ),
+              const SizedBox(height: 16),
+              Container(
+  width: 324,
+  height: 494,
+  clipBehavior: Clip.antiAlias,
+  decoration: BoxDecoration(),
+  child: Stack(
+    children: [
+      Positioned(
+        left: 0,
+        top: 0,
+        child: Container(
+          width: 324,
+          height: 494,
+          decoration: ShapeDecoration(
+            image: const DecorationImage(
+              image: NetworkImage("https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb3.png"),
+              fit: BoxFit.cover,
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+          ),
+        ),
+      ),
+      Positioned(
+        left: 0,
+        top: 298,
+        child: Container(
+          width: 324,
+          height: 196,
+          padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 20),
+          clipBehavior: Clip.antiAlias,
+          decoration: const ShapeDecoration(
+            color: Color(0x7F564F89),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
+              ),
+            ),
+          ),
+          child: const Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: double.infinity,
+                height: 62,
+                child: Text(
+                  'Accept Payments Seamlessly',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 32,
+                    fontFamily: 'Utendo',
+                    fontWeight: FontWeight.w500,
+                    height: 1.06,
+                  ),
+                ),
+              ),
+              SizedBox(height: 14),
+              SizedBox(
+                width: double.infinity,
+                child: Text(
+                  'Receive payments from clients with ease, whether they’re across the street or across the globe.',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontFamily: 'Utendo',
+                    fontWeight: FontWeight.w500,
+                    height: 1.25,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    ],
+  ),
+),
+               const CustomMobileCard1(
+                title: 'Fast Withdrawals',
+                description:
+                    'Access your funds quickly and efficiently, ensuring you have the cash flow needed to run your business smoothly.',
+                imageUrl:
+                    'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb2.png',
                 descriptionMaxLines: 6,
                 imageHeight: 324, // Custom height for the image
                 imageWidth: 324, // Show up to 6 lines, adjust as needed

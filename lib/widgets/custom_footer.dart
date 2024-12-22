@@ -39,8 +39,8 @@ class CustomFooter extends StatelessWidget {
                       children: [
                         _buildColumn1(),
                         _buildColumn2(context),
-                       
-                        _buildColumn3(),
+                        _buildColumn3(context),
+                        _buildColumn4(),
                       ],
                     )
                   : Column(
@@ -50,7 +50,9 @@ class CustomFooter extends StatelessWidget {
                         const SizedBox(height: 40),
                         _buildColumn2(context),
                         const SizedBox(height: 40),
-                        _buildColumn3(),
+                        _buildColumn3(context),
+                         const SizedBox(height: 40),
+                        _buildColumn4(),
                        
                       ],
                     ),
@@ -176,16 +178,7 @@ class CustomFooter extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 10),
-        InkWell(
-          onTap: () => context.go('/privacy'), // Navigate to Privacy Policy page
-          child: const Text(
-            'Privacy Policy',
-            style: TextStyle(
-              color: Color(0xFF888888),
-              fontSize: 20,
-            ),
-          ),
-        ),
+        
         const SizedBox(height: 10),
         InkWell(
           onTap: () => context.go('/terms'), // Navigate to Terms and Conditions page
@@ -201,10 +194,50 @@ class CustomFooter extends StatelessWidget {
       ],
     );
   }
+  }
+ Widget _buildColumn3(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          'Usefull links',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 36,
+          ),
+        ),
+        const SizedBox(height: 30),
+        InkWell(
+          onTap: () => context.go('/pricing'), // Navigate to Home page
+          child: const Text(
+            'Pricing',
+            style: TextStyle(
+              color: Color(0xFF888888),
+              fontSize: 20,
+            ),
+          ),
+        ),
+        const SizedBox(height: 10),
+        InkWell(
+          onTap: () => context.go('/comingsoon'), // Navigate to About Us page
+          child: const Text(
+            'Blog',
+            style: TextStyle(
+              color: Color(0xFF888888),
+              fontSize: 20,
+            ),
+          ),
+        ),
+       
+        
+      ],
+    );
+  }
+  
 
  
 
-  Widget _buildColumn3() {
+  Widget _buildColumn4() {
     return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -222,7 +255,7 @@ class CustomFooter extends StatelessWidget {
         ),
         SizedBox(height: 10),
         Text(
-          'Change the address to: 101 California Street, San Francisco, CA.',
+          '101 California Street, San Francisco, CA.',
           style: TextStyle(color: Color(0xFF888888), fontSize: 20),
         ),
         SizedBox(height: 30),
@@ -250,4 +283,4 @@ class CustomFooter extends StatelessWidget {
       ),
     );
   }
-}
+

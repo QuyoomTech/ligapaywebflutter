@@ -25,8 +25,11 @@ class MobileCareersPage extends StatelessWidget {
           subtitle: "We are an innovative fintech company .\n  Here, you can break free of bureaucracy, discover your spark, \n and bring creative ideas to life",
           buttonText: "Apply Now",
         onButtonPressed: () {
-          // Define what happens when the button is pressed
-          Navigator.pushNamed(context, '/apply');
+  // Handle button press here
+  print("Button Pressed");
+
+  // Navigate to the contact page using GoRouter
+  context.go('/apply');
         },
       ),
   const SizedBox(height:18),

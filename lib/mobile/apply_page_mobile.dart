@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import 'package:ligapay/widgets/coming_soon_desktop.dart';
 
@@ -9,21 +10,22 @@ class ApplyMobilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      // appBar: AppBar(
-      //   leading: IconButton(
-      //     icon: const Icon(Icons.arrow_back),
-      //     onPressed: () {
-      //       // Handle button press here
-      //       print("Button Pressed");
+    return Scaffold(
+     
+       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            // Handle button press here
+            print("Button Pressed");
 
-      //       // Navigate to the contact page using GoRouter
-      //       context.go('/');
-      //     },
-      //   ),
-      //   title: const Text(''),
-      // ),
-      body: SingleChildScrollView(
+            // Navigate to the contact page using GoRouter
+            context.go('/');
+          },
+        ),
+        title: const Text('Apply '),
+      ),
+      body: const SingleChildScrollView(
        // padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

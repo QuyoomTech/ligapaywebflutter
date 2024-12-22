@@ -20,6 +20,7 @@ class AboutUsPage extends StatelessWidget {
     ),
       body: const Padding(
         padding: EdgeInsets.all(16.0),
+        child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -49,6 +50,7 @@ class AboutUsPage extends StatelessWidget {
            
           ],
         ),
+      ),
       ),
     );
   }
