@@ -74,7 +74,7 @@ class _CustomFormState extends State<CustomForm> {
         children: <Widget>[
           _buildTextField(
             controller: nameController,
-            hintText: "Enter your Name",
+            hintText: "Enter your full name",
             validator: (value) =>
                 value!.trim().isEmpty ? "Name is required" : null,
           ),

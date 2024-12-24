@@ -1,16 +1,17 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // Required for input formatters
-import 'package:ligapay/model/form_model2.dart';
+import 'package:ligapay/model/form_model3.dart';
 
 
-class CustomForm2 extends StatefulWidget {
-  final Future<void> Function(FormModel2 formModel2)? onSubmit;
+
+class CustomForm3 extends StatefulWidget {
+  final Future<void> Function(FormModel3 formModel3)? onSubmit;
   final String submitButtonText;
   final Color buttonColor;
   final Color buttonTextColor;
 
-  const CustomForm2({
+  const CustomForm3({
     Key? key,
     required this.onSubmit,
     this.submitButtonText = "Submit Details",
@@ -19,15 +20,17 @@ class CustomForm2 extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _CustomForm2State createState() => _CustomForm2State();
+  _CustomForm3State createState() => _CustomForm3State();
 }
 
-class _CustomForm2State extends State<CustomForm2> {
+class _CustomForm3State extends State<CustomForm3> {
   final _formKey = GlobalKey<FormState>();
   TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController phoneController = TextEditingController();
-  
+  TextEditingController roleController = TextEditingController();
+  TextEditingController messageController = TextEditingController();
+
   bool isSubmitting = false;
 
   Future<void> _submitForm() async {
@@ -36,15 +39,16 @@ class _CustomForm2State extends State<CustomForm2> {
         isSubmitting = true;
       });
 
-      FormModel2 formModel2 = FormModel2(
+      FormModel3 formModel3 = FormModel3(
         nameController.text.trim(),
         emailController.text.trim(),
         phoneController.text.trim(),
-        
+        roleController.text.trim(),
+        messageController.text.trim(),
       );
 
       if (widget.onSubmit != null) {
-        await widget.onSubmit!(formModel2);
+        await widget.onSubmit!(formModel3);
       }
 
       setState(() {
@@ -58,7 +62,8 @@ class _CustomForm2State extends State<CustomForm2> {
     nameController.clear();
     emailController.clear();
     phoneController.clear();
-  
+    roleController.clear();
+    messageController.clear();
   }
 
   @override
@@ -90,7 +95,7 @@ class _CustomForm2State extends State<CustomForm2> {
               return null;
             },
           ),
-         _buildTextField(
+          _buildTextField(
             controller: phoneController,
             hintText: "Enter your Phone Number",
             keyboardType: TextInputType.phone,
@@ -108,7 +113,20 @@ class _CustomForm2State extends State<CustomForm2> {
               return null;
             },
           ),
-         
+          _buildTextField(
+            controller: roleController,
+            hintText: "Flutter Developer,UX Designer, Blockchain,",
+            validator: (value) =>
+                value!.trim().isEmpty ? "Which role are you interested in ?" : null,
+          ),
+          _buildTextField(
+            controller: messageController,
+            hintText: "Enter your Message",
+            validator: (value) =>
+                value!.trim().isEmpty ? "Message is required" : null,
+            maxLines: 16,
+            minLines: 6,
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 12),
             child: ElevatedButton(

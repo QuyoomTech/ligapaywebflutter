@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:ligapay/widgets/waitinglist_ui_mobile.dart';
 
 class  WaitinglistPageMobile extends StatelessWidget {
@@ -8,9 +9,21 @@ class  WaitinglistPageMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+ appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            // Handle button press here
+            print("Button Pressed");
 
-      body: SingleChildScrollView(
+            // Navigate to the contact page using GoRouter
+            context.go('/');
+          },
+        ),
+        title: const Text('Waiting list'),
+      ),
+      body: const SingleChildScrollView(
        // padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

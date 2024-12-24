@@ -4,9 +4,6 @@ import 'package:ligapay/widgets/contact%20_hero_desktop.dart';
 
 import 'package:ligapay/widgets/custom_footer.dart';
 
-
-
-// ignore: use_key_in_widget_constructors
 class DesktopContactPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -23,7 +20,7 @@ class DesktopContactPage extends StatelessWidget {
  const HeroContactDesktop(
           backgroundImageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb7.png",
           title: "Tomorrow can't wait. Get in touch today",
-          subtitle: "Go borderless with LigaPay. Join Now",
+          subtitle: "Go borderless with LigaPay. ",
          
         ),
       

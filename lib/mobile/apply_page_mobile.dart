@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:ligapay/widgets/apply_page_mobile_widget.dart';
 
-import 'package:ligapay/widgets/coming_soon_desktop.dart';
+
+
 
 class ApplyMobilePage extends StatelessWidget {
   const  ApplyMobilePage({super.key});
@@ -30,11 +32,12 @@ class ApplyMobilePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-           ComingSoonDesktop(
-        backgroundImageUrl: 'https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb1.png', // Replace with your image URL
-        title: 'Joint the LigaPay team', // Replace with your desired title
-        subtitle: 'Send your resume on \n hr@LigaPay.com and career@LigaPay.com  ', // Replace with your subtitle
-      ),
+        ApplyPageMobileWidget(
+          backgroundImageUrl: "https://raw.githubusercontent.com/QuyoomTech/ligapayassets/refs/heads/main/lb7.png",
+          title: "Join LigaPay team",
+          subtitle: "Welcome to Ligapay.Here, you can break free of bureaucracy, discover your spark, and bring creative ideas to life or",
+         
+        ),
           ],
         ),
       ),

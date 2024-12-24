@@ -149,25 +149,14 @@ class CustomFooter extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text(
-          'About Us',
+          'Quick links',
           style: TextStyle(
             color: Colors.white,
             fontSize: 36,
           ),
         ),
-        const SizedBox(height: 30),
-        InkWell(
-          onTap: () => context.go('/pricing'), // Navigate to Home page
-          child: const Text(
-            'Pricing',
-            style: TextStyle(
-              color: Color(0xFF888888),
-              fontSize: 20,
-            ),
-          ),
-        ),
-        const SizedBox(height: 10),
-        InkWell(
+            const SizedBox(height: 30),
+         InkWell(
           onTap: () => context.go('/about'), // Navigate to About Us page
           child: const Text(
             'About Us',
@@ -177,8 +166,21 @@ class CustomFooter extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: 10),
-        
+       
+          const SizedBox(height: 10),
+    
+        InkWell(
+          onTap: () => context.go('/privacy'), // Navigate to Home page
+          child: const Text(
+            'Privacy Policy',
+            style: TextStyle(
+              color: Color(0xFF888888),
+              fontSize: 20,
+            ),
+          ),
+        ),
+       
+       
         const SizedBox(height: 10),
         InkWell(
           onTap: () => context.go('/terms'), // Navigate to Terms and Conditions page
