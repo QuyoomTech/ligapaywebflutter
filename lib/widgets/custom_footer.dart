@@ -117,18 +117,18 @@ class CustomFooter extends StatelessWidget {
        Row(
   children: [
     GestureDetector(
-      onTap: () => _launchUrl('https://www.instagram.com/ligapay'),
+      onTap: () => _launchUrl('https://www.instagram.com/ligapay24/'),
       child: _buildSocialIcon(FontAwesomeIcons.instagram), // Instagram Icon
     ),
     const SizedBox(width: 10),
     GestureDetector(
-      onTap: () => _launchUrl('https://www.linkedin.com/in/ligapay'),
+      onTap: () => _launchUrl('http://www.linkedin.com/in/liga-pay-271828346'),
       child: _buildSocialIcon(FontAwesomeIcons.linkedin), // LinkedIn Icon
     ),
     const SizedBox(width: 10),
     GestureDetector(
-      onTap: () => _launchUrl('https://www.twitter.com/ligapay'),
-      child: _buildSocialIcon(FontAwesomeIcons.twitter), // X Icon (formerly Twitter)
+      onTap: () => _launchUrl('https://x.com/LigaPay24'),
+      child: _buildSocialIcon(FontAwesomeIcons.x), // X Icon (formerly Twitter)
     ),
     const SizedBox(width: 10),
     GestureDetector(
